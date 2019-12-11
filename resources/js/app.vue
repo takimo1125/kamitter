@@ -19,7 +19,7 @@
 <script>
     import {INTERNAL_SERVER_ERROR, NOT_FOUND, EXPIRED, UNAUTHORISED} from './utility'
     import Navbar from './components/Navbar.vue'
-    import Footer from './components/footer.vue'
+    import Footer from './components/Footer.vue'
     export default {
         components: {
             Navbar,
