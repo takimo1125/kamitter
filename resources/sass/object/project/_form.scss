@@ -1,0 +1,87 @@
+// ==================================
+// p-form
+// ==================================
+.p-form {
+    width: 100%;
+
+    &__label {
+        font-size: $font-size_m;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    &__item {
+        font-size: $font-size_m;
+        width: 100%;
+        height: 40px;
+        font-weight: 100;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+        line-height: 25px;
+        border: 1px solid $color-default-parent;
+        border-radius: 5px;
+        @include mq() {
+            font-size: $font-size_default;
+            line-height: 20px;
+            margin-bottom: 15px;
+        }
+
+        &--date {
+            width: 30%;
+        }
+
+        &--textarea {
+            height: 150px;
+            letter-spacing: 0.05em;
+        }
+    }
+
+    &__date {
+        font-size: $font-size_m;
+        width: 45%;
+        height: 40px;
+        font-weight: 100;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+        line-height: 25px;
+        border: 1px solid $color-default-parent;
+        border-radius: 5px;
+    }
+
+    &__button {
+        text-align: right;
+        transition: 0.3s;
+    }
+
+    &__select {
+        width: 100%;
+        font-size: $font-size_m;
+        height: 40px;
+        font-weight: 100;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+        line-height: 25px;
+        border: 1px solid $color-default-parent;
+        border-radius: 5px;
+        @include mq(){
+            font-size: $font-size_default;
+            line-height: 20px;
+        }
+    }
+
+    &__notion {
+        font-size: $font-size_default;
+    }
+
+    &__errors {
+        color: $color-danger;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid $color-danger;
+        border-radius: 5px;
+        list-style: none;
+    }
+}

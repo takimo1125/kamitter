@@ -1,0 +1,60 @@
+// ==================================
+// c-button
+// ==================================
+.c-button {
+    border: 1px solid $color-default;
+    border-radius: 0.25rem;
+    color: $color-default;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    padding: 0.6rem 0.8rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    //filter: drop-shadow(0px 3px 5px $color-default-parent);
+    @include mq(){
+        padding: 0.5rem 0.7rem;
+        font-size: 0.9rem;
+    }
+    &:hover{
+        transform: translate(-2px, -2px);
+        @include mq(){
+            transform: initial;
+        }
+    }
+    &:active{
+        transform: translate(0);
+        @include mq(){
+            transform: initial;
+        }
+    }
+    &--inverse {
+        background: $color-default;
+        border-color: $color-default;
+        color: $color-white;
+    }
+
+    &--twitter {
+        background: $color-twitter;
+        border-color: $color-twitter;
+        color: $color-white;
+    }
+
+    &--cancel {
+        border-color: $color-default;
+        color: $color-default;
+    }
+
+    &--danger {
+        color: $color-white;
+        border-color: $color-danger;
+        background: $color-danger;
+    }
+    &--success {
+        color: $color-white;
+        border-color: $color-success;
+        background: $color-success;
+    }
+}

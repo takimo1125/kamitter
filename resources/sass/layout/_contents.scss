@@ -1,0 +1,11 @@
+// ==================================
+// l-contents
+// ==================================
+.l-contents{
+    padding: calc(80px + #{$header_height}) 10%;
+    display: flex;
+    justify-content: center;
+    @include mq(){
+        padding: calc(40px + #{$header_height}) 2.5%;
+    }
+}

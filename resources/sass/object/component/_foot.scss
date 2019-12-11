@@ -1,0 +1,13 @@
+// ==================================
+// c-foot
+// ==================================
+.c-foot{
+    height: 30px;
+    padding: 10px 0;
+    background: #f2f2f2;
+    &__p{
+        font-size: $font-size_s;
+        line-height: 20px;
+        text-align: center;
+    }
+}
