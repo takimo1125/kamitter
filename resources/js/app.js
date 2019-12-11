@@ -4,7 +4,7 @@ import Vue from 'vue'
 import router from './router'
 import store from './store'
 
-import App from './App.vue'
+import App from './app.vue'
 
 /**
  * 一番最初の初期描画の時に、ユーザ認証とTwitterUser認証を行う
