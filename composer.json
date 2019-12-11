@@ -12,6 +12,7 @@
         "ext-intl": "*",
         "abraham/twitteroauth": "^1.1",
         "fideloper/proxy": "^4.0",
+        "guzzlehttp/guzzle": "^6.5",
         "laravel/framework": "^6.2",
         "laravel/helpers": "^1.1",
         "laravel/socialite": "^4.3",

@@ -5,7 +5,6 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\User;
-use Sichikawa\LaravelSendgridDriver\SendGrid;
 /**
  * パスワードリセット申請時に送信するメールのクラス
  * Class PasswordReset
@@ -13,7 +12,7 @@ use Sichikawa\LaravelSendgridDriver\SendGrid;
  */
 class PasswordReset extends Mailable
 {
-    use Queueable, SerializesModels, SendGrid;
+    use Queueable, SerializesModels;
     public $user;
     public $password_reset;
     /**
@@ -34,20 +33,7 @@ class PasswordReset extends Mailable
     public function build()
     {
         return $this
-        ->view('emails.passwordReset')
-        ->subject('パスワード再設定のリンク')
-        ->from('from@example.com')
-        ->to(['to@example.com'])
-        ->sendgrid([
-            'personalizations' => [
-                [
-                    'substitutions' => [
-                        ':myname' => 'kamitter',
-                    ],
-                ],
-            ],
-        ]);
-
-
+            ->subject('パスワード再設定のリンク')
+            ->view('emails.passwordReset');
     }
 }
