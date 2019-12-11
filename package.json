@@ -11,6 +11,10 @@
 
         "postinstall": "npm run prod"
     },
+    "engines": {
+      "node": "8.12.0",
+      "npm": "6.0.0"
+    },
     "devDependencies": {
         "axios": "^0.19",
         "browser-sync": "^2.26.7",
