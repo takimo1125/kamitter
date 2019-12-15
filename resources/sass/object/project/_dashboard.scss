@@ -2,6 +2,7 @@
 // p-dashboard
 // ==================================
 .p-dashboard {
+    position: static;
     &__panel {
         padding: 40px;
         border: 1px solid $color-default-parent;
