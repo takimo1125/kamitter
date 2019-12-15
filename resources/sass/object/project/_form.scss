@@ -29,6 +29,9 @@
 
         &--date {
             width: 30%;
+            @include mq() {
+                font-size: $font-size_s;
+            }
         }
 
         &--textarea {

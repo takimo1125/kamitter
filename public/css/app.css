@@ -465,6 +465,12 @@ img {
   width: 30%;
 }
 
+@media screen and (max-width: 960px) {
+  .p-form__item--date {
+    font-size: 12px;
+  }
+}
+
 .p-form__item--textarea {
   height: 150px;
   letter-spacing: 0.05em;
