@@ -51,6 +51,9 @@
         line-height: 25px;
         border: 1px solid $color-default-parent;
         border-radius: 5px;
+        @include mq() {
+            font-size: $font-size_s;
+        }
     }
 
     &__button {

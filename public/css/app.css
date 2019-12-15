@@ -489,6 +489,12 @@ img {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 960px) {
+  .p-form__date {
+    font-size: 12px;
+  }
+}
+
 .p-form__button {
   text-align: right;
   -webkit-transition: 0.3s;
