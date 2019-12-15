@@ -83,7 +83,7 @@ return [
     'min' => [
         'numeric' => 'The :attribute must be at least :min.',
         'file' => 'The :attribute must be at least :min kilobytes.',
-        'string' => ':attribute は:min文字以上で入力してください。',
+        'string' => ':attributeは:min文字以上で入力してください。',
         'array' => 'The :attribute must have at least :min items.',
     ],
     'not_in' => 'The selected :attribute is invalid.',
