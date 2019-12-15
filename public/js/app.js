@@ -2583,6 +2583,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -7194,35 +7196,49 @@ var render = function() {
               [_vm._v(_vm._s(followTarget.filter_word.merged_word))]
             ),
             _vm._v(" "),
-            _c("td", { staticClass: "p-table__btnarea" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "c-button c-button--twitter p-table__button",
-                  on: {
-                    click: function($event) {
-                      $event.stopPropagation()
-                      return _vm.showEditModal(followTarget, index)
-                    }
-                  }
-                },
-                [_vm._v("編集\n                ")]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "c-button c-button--danger p-table__button",
-                  on: {
-                    click: function($event) {
-                      $event.stopPropagation()
-                      return _vm.removeFollowTarget(followTarget.id, index)
-                    }
-                  }
-                },
-                [_vm._v("削除\n                ")]
-              )
-            ])
+            _c(
+              "td",
+              { staticClass: "p-table__btnarea" },
+              [
+                followTarget.status_label === "待機中"
+                  ? [
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "c-button c-button--twitter p-table__button",
+                          on: {
+                            click: function($event) {
+                              $event.stopPropagation()
+                              return _vm.showEditModal(followTarget, index)
+                            }
+                          }
+                        },
+                        [_vm._v("編集\n                    ")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "c-button c-button--danger p-table__button",
+                          on: {
+                            click: function($event) {
+                              $event.stopPropagation()
+                              return _vm.removeFollowTarget(
+                                followTarget.id,
+                                index
+                              )
+                            }
+                          }
+                        },
+                        [_vm._v("削除\n                    ")]
+                      )
+                    ]
+                  : _vm._e()
+              ],
+              2
+            )
           ])
         })
       ],

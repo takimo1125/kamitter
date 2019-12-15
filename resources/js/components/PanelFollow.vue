@@ -35,14 +35,16 @@
                 <td aria-label="ターゲット" class="p-table__td">@{{followTarget.target}}</td>
                 <td aria-label="条件" class="p-table__td">{{followTarget.filter_word.merged_word}}</td>
                 <td class="p-table__btnarea">
-                    <button class="c-button c-button--twitter p-table__button"
-                            @click.stop="showEditModal(followTarget, index)"
-                    >編集
-                    </button>
-                    <button class="c-button c-button--danger p-table__button"
-                            @click.stop="removeFollowTarget(followTarget.id, index)"
-                    >削除
-                    </button>
+                    <template v-if="followTarget.status_label === '待機中' ">
+                        <button class="c-button c-button--twitter p-table__button"
+                                @click.stop="showEditModal(followTarget, index)"
+                        >編集
+                        </button>
+                        <button class="c-button c-button--danger p-table__button"
+                                @click.stop="removeFollowTarget(followTarget.id, index)"
+                        >削除
+                        </button>
+                    </template>
                 </td>
             </tr>
         </table>
