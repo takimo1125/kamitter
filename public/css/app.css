@@ -424,10 +424,6 @@ img {
   }
 }
 
-.p-dashboard {
-  position: static;
-}
-
 .p-dashboard__panel {
   padding: 40px;
   border: 1px solid #3335;
