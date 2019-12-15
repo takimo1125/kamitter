@@ -8,18 +8,18 @@
         "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-
         "postinstall": "npm run prod"
     },
     "engines": {
-      "node": "8.12.0",
-      "npm": "6.0.0"
+        "node": "8.12.0",
+        "npm": "6.0.0"
     },
     "devDependencies": {
         "axios": "^0.19",
         "browser-sync": "^2.26.7",
         "browser-sync-webpack-plugin": "2.2.2",
         "cross-env": "^5.1",
+        "es6-promise": "^4.2.8",
         "gulp": "^4.0.2",
         "gulp-sass": "^4.0.2",
         "gulp-sass-glob": "^1.1.0",
