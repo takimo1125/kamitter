@@ -164,22 +164,6 @@ class InspectNotFollowback extends Command
         return $users_string_list;
     }
     /**
-     * APIを使用してツイッターのフォロワー数を取得する
-     * @param $system_manager_id
-     * @param $twitter_user_id
-     */
-    private function getTwitterFollowerNum($system_manager_id, $twitter_user_id)
-    {
-        //API認証用のツイッターユーザー情報を取得
-        $twitter_user = TwitterUser::where('id', $twitter_user_id)->first();
-        $api_result = TwitterApi::fetchTwitterUserInfo($twitter_user);
-        $flg_skip_to_next_user = TwitterApi::handleApiError($api_result, $system_manager_id, $twitter_user_id);
-        if ($flg_skip_to_next_user === true) {
-            return 0;
-        }
-        return $api_result->followers_count;
-    }
-    /**
      * APIを使ってフォローリレーション情報の取得を行う
      * @param $twitter_user
      * @param $user_id_string
@@ -198,5 +182,21 @@ class InspectNotFollowback extends Command
             $param, $token, $token_secret);
         Log::info('###API フォローリレーションの取得完了');
         return $response_json;
+    }
+    /**
+     * APIを使用してツイッターのフォロワー数を取得する
+     * @param $system_manager_id
+     * @param $twitter_user_id
+     */
+    private function getTwitterFollowerNum($system_manager_id, $twitter_user_id)
+    {
+        //API認証用のツイッターユーザー情報を取得
+        $twitter_user = TwitterUser::where('id', $twitter_user_id)->first();
+        $api_result = TwitterApi::fetchTwitterUserInfo($twitter_user);
+        $flg_skip_to_next_user = TwitterApi::handleApiError($api_result, $system_manager_id, $twitter_user_id);
+        if ($flg_skip_to_next_user === true) {
+            return 0;
+        }
+        return $api_result->followers_count;
     }
 }

@@ -90,7 +90,7 @@ class AutoUnfollow extends Command
     }
     /**
      * アンフォローターゲットリストのユーザーをアンフォローする
-     * アンフォロー後に、アンフォローターゲットをアンフォロー履歴にmoveする
+     * アンフォロー後に、アンフォローターゲットをアンフォロー履歴に移動する
      * @param $system_manager_id
      * @param $twitter_user_id
      * @param $unfollow_targets
@@ -117,7 +117,7 @@ class AutoUnfollow extends Command
         Log::info('##自動アンフォロー完了');
     }
     /**
-     * アンフォローターゲットをアンフォロー履歴にmoveする
+     * アンフォローターゲットをアンフォロー履歴に移動する
      * @param $twitter_user_id
      * @param $unfollow_target
      */

@@ -100,7 +100,7 @@ class InspectActiveUser extends Command
     /**
      * APIで検査テーブルのユーザーの最新ツイート情報を取得する
      * ツイートされた日にちからアクティブユーザーかどうかを判別して、
-     * 非アクティブユーザーならアンフォローターゲットリストにmoveする
+     * 非アクティブユーザーならアンフォローターゲットリストに移動する
      * @param $system_manager_id
      * @param $twitter_user_id
      * @param $inspect_targets

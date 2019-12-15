@@ -30,11 +30,11 @@
                 <th class="p-table__th p-table__th--tweet">操作</th>
             </tr>
 
-            <tr v-for="(autoTweet, index) in autoTweets" :key="autoTweet.id">
-                <td class="p-table__td">{{autoTweet.status_label}}</td>
-                <td class="p-table__td">{{autoTweet.tweet}}</td>
-                <td class="p-table__td">{{autoTweet.japanese_formatted_date}}</td>
-                <td class="p-table__td">
+            <tr class="p-table__tr" v-for="(autoTweet, index) in autoTweets" :key="autoTweet.id">
+                <td aria-label="ステータス" class="p-table__td">{{autoTweet.status_label}}</td>
+                <td aria-label="ツイート内容" class="p-table__td">{{autoTweet.tweet}}</td>
+                <td aria-label="時刻" class="p-table__td">{{autoTweet.japanese_formatted_date}}</td>
+                <td class="p-table__btnarea">
                     <template v-if="autoTweet.status === 1">
                         <button class="c-button c-button--twitter p-table__button"
                                 @click.stop="showEditModal(autoTweet, index)"

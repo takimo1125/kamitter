@@ -16,11 +16,11 @@
                 <th class="p-table__th p-table__th--filter">除外ワード</th>
                 <th class="p-table__th p-table__th--filter">操作</th>
             </tr>
-            <tr v-for="(filter, index) in filters" :key='index'>
-                <td class="p-table__td">{{filter.type_label}}</td>
-                <td class="p-table__td">{{filter.word}}</td>
-                <td class="p-table__td">{{filter.remove}}</td>
-                <td class="p-table__td">
+            <tr class="p-table__tr" v-for="(filter, index) in filters" :key='index'>
+                <td aria-label="条件タイプ" class="p-table__td">{{filter.type_label}}</td>
+                <td aria-label="キーワード" class="p-table__td">{{filter.word}}</td>
+                <td aria-label="除外ワード" class="p-table__td">{{filter.remove}}</td>
+                <td class="p-table__btnarea">
                     <button class="c-button c-button--twitter p-table__button"
                             @click.stop="showEditModal(filter, index)"
                     >編集

@@ -36,6 +36,11 @@
         display: inline-block;
         @include mq() {
             margin-bottom: 3px;
+            border-radius: 5px;
+            display: inline-block;
+            flex: 1;
+            height: 40px;
+            margin: 0 2px;
         }
     }
 
@@ -55,6 +60,7 @@
         @include mq() {
             font-size: $font-size_s;
             padding: 5px;
+            display: none;
         }
 
         &--follow {
@@ -113,9 +119,48 @@
     &__td {
         padding: 10px;
         border-bottom: 1px dotted $color-default-parent;
+        white-space: pre-line;
         @include mq() {
             font-size: $font-size_s;
             padding: 5px;
+            border-bottom: 1px solid #dbe1e8;
+            display: flex;
+            justify-content: space-between;
+            &:last-child {
+                border-bottom: none;
+            }
+            &::before {
+                content: attr(aria-label);
+                font-weight: bold;
+                padding-right: 20px;
+                white-space: nowrap;
+            }
         }
+    }
+
+    &__tr{
+        @include mq() {
+            display: block;
+            border: 1px solid #dbe1e8;
+            box-shadow: 3px 3px rgba(0, 0, 0, .1);
+            margin-bottom: 20px;
+            padding: 8px 8px 0;
+        }
+    }
+
+    &__btnarea{
+        padding: 10px;
+        border-bottom: 1px dotted $color-default-parent;
+        @include mq() {
+            padding: 5px;
+            display: flex;
+            &:last-child {
+                border-bottom: none;
+            }
+            &::before {
+                display: none;
+            }
+        }
+
     }
 }

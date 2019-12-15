@@ -30,11 +30,11 @@
                 <th class="p-table__th p-table__th--follow">操作</th>
             </tr>
 
-            <tr v-for="(followTarget, index) in followTargets" :key='index'>
-                <td class="p-table__td">{{followTarget.status_label}}</td>
-                <td class="p-table__td">@{{followTarget.target}}</td>
-                <td class="p-table__td">{{followTarget.filter_word.merged_word}}</td>
-                <td class="p-table__td">
+            <tr class="p-table__tr" v-for="(followTarget, index) in followTargets" :key='index'>
+                <td aria-label="ステータス" class="p-table__td">{{followTarget.status_label}}</td>
+                <td aria-label="ターゲット" class="p-table__td">@{{followTarget.target}}</td>
+                <td aria-label="条件" class="p-table__td">{{followTarget.filter_word.merged_word}}</td>
+                <td class="p-table__btnarea">
                     <button class="c-button c-button--twitter p-table__button"
                             @click.stop="showEditModal(followTarget, index)"
                     >編集

@@ -13,6 +13,7 @@ use App\Mail\CompleteFollow;
 use Illuminate\Console\Command;
 use App\Http\Components\TwitterApi;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class AutoFollow extends Command
 {

@@ -510,7 +510,7 @@ img {
 }
 
 .p-form__notion {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .p-form__errors {
@@ -822,6 +822,12 @@ img {
 @media screen and (max-width: 960px) {
   .p-table__button {
     margin-bottom: 3px;
+    border-radius: 5px;
+    display: inline-block;
+    -webkit-box-flex: 1;
+            flex: 1;
+    height: 40px;
+    margin: 0 2px;
   }
 }
 
@@ -847,6 +853,7 @@ img {
   .p-table__th {
     font-size: 12px;
     padding: 5px;
+    display: none;
   }
 }
 
@@ -900,12 +907,60 @@ img {
 .p-table__td {
   padding: 10px;
   border-bottom: 1px dotted #3335;
+  white-space: pre-line;
 }
 
 @media screen and (max-width: 960px) {
   .p-table__td {
     font-size: 12px;
     padding: 5px;
+    border-bottom: 1px solid #dbe1e8;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+  }
+
+  .p-table__td:last-child {
+    border-bottom: none;
+  }
+
+  .p-table__td::before {
+    content: attr(aria-label);
+    font-weight: bold;
+    padding-right: 20px;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .p-table__tr {
+    display: block;
+    border: 1px solid #dbe1e8;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 8px 8px 0;
+  }
+}
+
+.p-table__btnarea {
+  padding: 10px;
+  border-bottom: 1px dotted #3335;
+}
+
+@media screen and (max-width: 960px) {
+  .p-table__btnarea {
+    padding: 5px;
+    display: -webkit-box;
+    display: flex;
+  }
+
+  .p-table__btnarea:last-child {
+    border-bottom: none;
+  }
+
+  .p-table__btnarea::before {
+    display: none;
   }
 }
 

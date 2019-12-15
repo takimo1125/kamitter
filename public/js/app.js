@@ -6577,20 +6577,35 @@ var render = function() {
         _vm._m(0),
         _vm._v(" "),
         _vm._l(_vm.filters, function(filter, index) {
-          return _c("tr", { key: index }, [
-            _c("td", { staticClass: "p-table__td" }, [
-              _vm._v(_vm._s(filter.type_label))
-            ]),
+          return _c("tr", { key: index, staticClass: "p-table__tr" }, [
+            _c(
+              "td",
+              {
+                staticClass: "p-table__td",
+                attrs: { "aria-label": "条件タイプ" }
+              },
+              [_vm._v(_vm._s(filter.type_label))]
+            ),
             _vm._v(" "),
-            _c("td", { staticClass: "p-table__td" }, [
-              _vm._v(_vm._s(filter.word))
-            ]),
+            _c(
+              "td",
+              {
+                staticClass: "p-table__td",
+                attrs: { "aria-label": "キーワード" }
+              },
+              [_vm._v(_vm._s(filter.word))]
+            ),
             _vm._v(" "),
-            _c("td", { staticClass: "p-table__td" }, [
-              _vm._v(_vm._s(filter.remove))
-            ]),
+            _c(
+              "td",
+              {
+                staticClass: "p-table__td",
+                attrs: { "aria-label": "除外ワード" }
+              },
+              [_vm._v(_vm._s(filter.remove))]
+            ),
             _vm._v(" "),
-            _c("td", { staticClass: "p-table__td" }, [
+            _c("td", { staticClass: "p-table__btnarea" }, [
               _c(
                 "button",
                 {
@@ -7154,20 +7169,32 @@ var render = function() {
         _vm._m(0),
         _vm._v(" "),
         _vm._l(_vm.followTargets, function(followTarget, index) {
-          return _c("tr", { key: index }, [
-            _c("td", { staticClass: "p-table__td" }, [
-              _vm._v(_vm._s(followTarget.status_label))
-            ]),
+          return _c("tr", { key: index, staticClass: "p-table__tr" }, [
+            _c(
+              "td",
+              {
+                staticClass: "p-table__td",
+                attrs: { "aria-label": "ステータス" }
+              },
+              [_vm._v(_vm._s(followTarget.status_label))]
+            ),
             _vm._v(" "),
-            _c("td", { staticClass: "p-table__td" }, [
-              _vm._v("@" + _vm._s(followTarget.target))
-            ]),
+            _c(
+              "td",
+              {
+                staticClass: "p-table__td",
+                attrs: { "aria-label": "ターゲット" }
+              },
+              [_vm._v("@" + _vm._s(followTarget.target))]
+            ),
             _vm._v(" "),
-            _c("td", { staticClass: "p-table__td" }, [
-              _vm._v(_vm._s(followTarget.filter_word.merged_word))
-            ]),
+            _c(
+              "td",
+              { staticClass: "p-table__td", attrs: { "aria-label": "条件" } },
+              [_vm._v(_vm._s(followTarget.filter_word.merged_word))]
+            ),
             _vm._v(" "),
-            _c("td", { staticClass: "p-table__td" }, [
+            _c("td", { staticClass: "p-table__btnarea" }, [
               _c(
                 "button",
                 {
@@ -7718,12 +7745,17 @@ var render = function() {
         _vm._m(0),
         _vm._v(" "),
         _vm._l(_vm.likes, function(like, index) {
-          return _c("tr", { key: index }, [
-            _c("th", { staticClass: "p-table__td" }, [
-              _vm._v(_vm._s(like.filter_word.merged_word))
-            ]),
+          return _c("tr", { key: index, staticClass: "p-table__tr" }, [
+            _c(
+              "th",
+              {
+                staticClass: "p-table__td",
+                attrs: { "aria-label": "いいね条件" }
+              },
+              [_vm._v(_vm._s(like.filter_word.merged_word))]
+            ),
             _vm._v(" "),
-            _c("th", { staticClass: "p-table__td" }, [
+            _c("th", { staticClass: "p-table__btnarea" }, [
               _c(
                 "button",
                 {
@@ -8134,22 +8166,34 @@ var render = function() {
         _vm._m(0),
         _vm._v(" "),
         _vm._l(_vm.autoTweets, function(autoTweet, index) {
-          return _c("tr", { key: autoTweet.id }, [
-            _c("td", { staticClass: "p-table__td" }, [
-              _vm._v(_vm._s(autoTweet.status_label))
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "p-table__td" }, [
-              _vm._v(_vm._s(autoTweet.tweet))
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "p-table__td" }, [
-              _vm._v(_vm._s(autoTweet.japanese_formatted_date))
-            ]),
+          return _c("tr", { key: autoTweet.id, staticClass: "p-table__tr" }, [
+            _c(
+              "td",
+              {
+                staticClass: "p-table__td",
+                attrs: { "aria-label": "ステータス" }
+              },
+              [_vm._v(_vm._s(autoTweet.status_label))]
+            ),
             _vm._v(" "),
             _c(
               "td",
-              { staticClass: "p-table__td" },
+              {
+                staticClass: "p-table__td",
+                attrs: { "aria-label": "ツイート内容" }
+              },
+              [_vm._v(_vm._s(autoTweet.tweet))]
+            ),
+            _vm._v(" "),
+            _c(
+              "td",
+              { staticClass: "p-table__td", attrs: { "aria-label": "時刻" } },
+              [_vm._v(_vm._s(autoTweet.japanese_formatted_date))]
+            ),
+            _vm._v(" "),
+            _c(
+              "td",
+              { staticClass: "p-table__btnarea" },
               [
                 autoTweet.status === 1
                   ? [
