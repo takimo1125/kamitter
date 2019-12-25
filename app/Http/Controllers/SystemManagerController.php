@@ -41,6 +41,9 @@ class SystemManagerController extends Controller
                 $system_manager->auto_tweet_status = 2;
                 break;
         }
+        if ($request->type === 1) {
+            Artisan::call('auto:follow');
+        }
         $system_manager->save();
         return response($system_manager, 200);
     }

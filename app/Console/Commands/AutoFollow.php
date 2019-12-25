@@ -49,14 +49,14 @@ class AutoFollow extends Command
     const API_PER_A_DAY = 24 / self::INTERVAL_HOURS;
     //フォロワー数に応じた一日のフォロー上限数
     const FOLLOW_RATE_PER_DAY = [
-        "100" => 20,
-        "500" => 24,
-        "1000" => 40,
-        "1500" => 50,
-        "2000" => 50,
-        "3000" => 50,
+        "100" => 24,
+        "500" => 36,
+        "1000" => 48,
+        "1500" => 60,
+        "2000" => 84,
+        "3000" => 96,
     ];
-    const FOLLOW_RATE_MAX = 50;
+    const FOLLOW_RATE_MAX = 108;
     /**
      * Execute the console command.
      * フォロワーターゲットリストを作成して自動フォローを行う。
