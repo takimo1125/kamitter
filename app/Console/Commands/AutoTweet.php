@@ -93,8 +93,8 @@ class AutoTweet extends Command
      */
     private function sendMail($system_manager_id, $twitter_user_id, $auto_tweet)
     {
-        $system_manager = SystemManager::find($system_manager_id)->with('user')->first();
-        $twitter_user = TwitterUser::find($twitter_user_id)->first();
+        $system_manager = SystemManager::with('user')->find($system_manager_id);
+        $twitter_user = TwitterUser::find($twitter_user_id);
         $user = $system_manager->user;
         Mail::to($user)->send(new CompleteTweet($user, $twitter_user, $auto_tweet));
     }

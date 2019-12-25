@@ -100,8 +100,8 @@ class TwitterApi
      */
     public static function sendMail($system_manager_id, $twitter_user_id, $mail_type = 0)
     {
-        $system_manager = SystemManager::find($system_manager_id)->with('user')->first();
-        $twitter_user = TwitterUser::find($twitter_user_id)->first();
+        $system_manager = SystemManager::with('user')->find($system_manager_id);
+        $twitter_user = TwitterUser::find($twitter_user_id);
         $user = $system_manager->user;
         if ($mail_type === self::ERROR_CODE_SUSPENDED) {
             //凍結の場合のメール送信
