@@ -49,6 +49,9 @@
                             <label class="p-form__label" for="login-password">パスワード</label>
                             <input type="password" class="p-form__item" id="login-password"
                                    v-model="loginForm.password" required>
+                            <label>
+                                <input type="checkbox" id="login-remember" v-model="loginForm.remember">ログイン状態を保持する
+                            </label>
                             <div class="p-form__button">
                                 <button type="submit" class="c-button c-button--inverse">ログイン</button>
                             </div>
@@ -124,7 +127,8 @@
                 isPush: false,
                 loginForm: {
                     email: '',
-                    password: ''
+                    password: '',
+                    remember: ''
                 },
                 registerForm: {
                     name: '',

@@ -7,4 +7,9 @@
         border: 1px solid $color-default-parent;
         border-radius: 5px;
     }
+    &__notion {
+        @include mq() {
+            font-size: $font-size_s;
+        }
+    }
 }

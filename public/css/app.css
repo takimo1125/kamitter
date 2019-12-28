@@ -241,7 +241,7 @@ img {
 @media screen and (max-width: 960px) {
   .c-button {
     padding: 0.5rem 0.7rem;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -319,6 +319,7 @@ img {
 .c-tab__list {
   display: -webkit-box;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .c-tab__item {
@@ -336,7 +337,6 @@ img {
     font-size: 12px;
     padding: 5px;
     margin-right: 10px;
-    width: 20%;
   }
 }
 
@@ -428,6 +428,12 @@ img {
   padding: 40px;
   border: 1px solid #3335;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 960px) {
+  .p-dashboard__notion {
+    font-size: 12px;
+  }
 }
 
 .p-form {
@@ -522,7 +528,7 @@ img {
 }
 
 .p-form__notion {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .p-form__errors {
@@ -640,6 +646,17 @@ img {
 .p-navbar__name {
   font-size: 16px;
   color: #fff;
+  overflow: hidden;
+  max-width: 300px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  float: left;
+}
+
+@media screen and (max-width: 960px) {
+  .p-navbar__name {
+    max-width: 150px;
+  }
 }
 
 .p-navbar__name:hover {
@@ -1103,6 +1120,14 @@ img {
 
 .u-color__bg--white {
   background: #fff;
+}
+
+.u-color__font--white {
+  color: #fff;
+}
+
+.u-color__font--red {
+  color: #dc3545;
 }
 
 .u-color__bg--blue {

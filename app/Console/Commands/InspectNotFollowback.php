@@ -33,7 +33,7 @@ class InspectNotFollowback extends Command
         parent::__construct();
     }
     const API_URL_FRIEND_LOOKUP = 'friendships/lookup';
-    const FOLLOWER_NUMBER_FOR_ENTRY_UNFOLLOW = 5000;
+    const FOLLOWER_NUMBER_FOR_ENTRY_UNFOLLOW = 1;
     /**
      * Execute the console command.
      * フォローから7日経過したユーザーデータを元に、

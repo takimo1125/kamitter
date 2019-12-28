@@ -34,7 +34,7 @@ class InspectActiveUser extends Command
         parent::__construct();
     }
     const API_URL_USERS_LOOKUP = 'users/lookup';
-    const FOLLOWER_NUMBER_FOR_ENTRY_UNFOLLOW = 5000;
+    const FOLLOWER_NUMBER_FOR_ENTRY_UNFOLLOW = 1;
     /**
      * Execute the console command.
      * フォロー履歴から、アクティブユーザーを検査するテーブルを作成する

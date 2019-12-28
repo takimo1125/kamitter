@@ -35,6 +35,15 @@
     &__name {
         font-size: $font-size_m;
         color: $color-white;
+        overflow: hidden;
+        max-width: 300px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        float: left;
+        @include mq() {
+            max-width: 150px;
+        }
+
         &:hover {
             transition: all .3s ease;
             opacity: .7;

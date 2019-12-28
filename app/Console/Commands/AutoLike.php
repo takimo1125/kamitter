@@ -1,10 +1,14 @@
 <?php
 namespace App\Console\Commands;
+use App\TwitterUser;
 use App\AutomaticLike;
-use App\Http\Components\TwitterApi;
 use App\SystemManager;
+use App\Mail\CompleteLike;
 use Illuminate\Console\Command;
+use App\Http\Components\TwitterApi;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
+
 class AutoLike extends Command
 {
     /**
@@ -77,10 +81,24 @@ class AutoLike extends Command
                     }
                 }
             }
+            Log::info('##自動いいねが完了しました');
+            $this->sendMail($system_manager_id, $twitter_user_id);
         }
         Log::info('=====================================================================');
         Log::info('AutoLike : 終了');
         Log::info('=====================================================================');
+    }
+    /**
+     * 自動アンフォロー完了メールを送信する
+     * @param $system_manager_id
+     * @param $twitter_user_id
+     */
+    private function sendMail($system_manager_id, $twitter_user_id)
+    {
+        $system_manager = SystemManager::with('user')->find($system_manager_id);
+        $twitter_user = TwitterUser::find($twitter_user_id);
+        $user = $system_manager->user;
+        Mail::to($user)->send(new CompleteLike($user, $twitter_user));
     }
     /**
      * APIを使用して、フィルターワードで指定されたワードでツイート検索を行う

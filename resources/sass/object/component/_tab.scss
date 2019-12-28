@@ -8,6 +8,7 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
     }
     &__item {
         font-size: $font-size_m;
@@ -21,7 +22,6 @@
             font-size: $font-size_s;
             padding: 5px;
             margin-right: 10px;
-            width: 20%;
         }
 
         &:hover {

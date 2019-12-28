@@ -8,8 +8,9 @@
              @click="isMenuActive = ! isMenuActive"
              v-if="isLogin">
             <div class="p-navbar__name">
-                {{ username }}<i class="c-icon fas fa-caret-down"></i>
+                {{ username }}
             </div>
+            <i class="c-icon u-color__font--white fas fa-caret-down"></i>
             <ul class="p-navbar__list"
                 :class="{'p-navbar__list--active': isMenuActive}"
             >

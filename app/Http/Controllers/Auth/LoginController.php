@@ -40,7 +40,16 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
     {
-        return $user;
+        if($request->only('request') == true){
+            $credentials = $request->only('email', 'password');
+
+            if (Auth::attempt($credentials)) {
+                // 認証に成功した
+                return $user;
+            }
+        }else{
+            return $user;
+        }
     }
 
     protected function loggedOut(Request $request)

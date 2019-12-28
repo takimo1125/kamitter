@@ -2009,6 +2009,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2093,6 +2094,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utility__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utility */ "./resources/js/utility.js");
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2456,6 +2469,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utility__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utility */ "./resources/js/utility.js");
 
+//
+//
+//
 //
 //
 //
@@ -4683,6 +4699,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4693,7 +4712,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       isPush: false,
       loginForm: {
         email: '',
-        password: ''
+        password: '',
+        remember: ''
       },
       registerForm: {
         name: '',
@@ -7685,9 +7705,12 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "p-navbar__name" }, [
-              _vm._v("\n            " + _vm._s(_vm.username)),
-              _c("i", { staticClass: "c-icon fas fa-caret-down" })
+              _vm._v("\n            " + _vm._s(_vm.username) + "\n        ")
             ]),
+            _vm._v(" "),
+            _c("i", {
+              staticClass: "c-icon u-color__font--white fas fa-caret-down"
+            }),
             _vm._v(" "),
             _c(
               "ul",
@@ -7772,6 +7795,39 @@ var render = function() {
         ]
       )
     ]),
+    _vm._v(" "),
+    _c("p", { staticClass: "p-dashboard__notion" }, [
+      _vm._v("※ 除外ワードは複数ワードを指定することができません。")
+    ]),
+    _c("br"),
+    _vm._v(" "),
+    _c("p", { staticClass: "p-dashboard__notion" }, [
+      _vm._v(
+        "※ 条件タイプが「次のワードを含む」を選んだ際は、キーワードが複数の場合には複数ワードが全て含まれる条件に該当するものが抽出されます。"
+      )
+    ]),
+    _c("br"),
+    _vm._v(" "),
+    _c("p", { staticClass: "p-dashboard__notion" }, [
+      _vm._v(
+        "※ 条件タイプが「いずれかのワードを含む」を選んだ際は、キーワードが複数の場合には複数ワードの一つでも含まれている条件に該当するものが抽出されます。"
+      )
+    ]),
+    _c("br"),
+    _vm._v(" "),
+    _c("p", { staticClass: "p-dashboard__notion" }, [
+      _vm._v(
+        "※ 自動いいね機能でキーワードを設定した場合は、登録されたキーワードをつぶやいたツイートをいいねします。除外ワードが含まれていた場合は、いいねしません。"
+      )
+    ]),
+    _c("br"),
+    _vm._v(" "),
+    _c("p", { staticClass: "p-dashboard__notion" }, [
+      _vm._v(
+        "※ 自動フォロー機能でキーワードを設定した場合は、ターゲットアカウントのフォロワーから登録されたキーワードがTwitterのプロフィールに含まれたユーザーを抽出し、「フォロワーターゲットリスト」を作成します。除外ワードが含まれていた場合のターゲットアカウントのフォロワーは、抽出しません。"
+      )
+    ]),
+    _c("br"),
     _vm._v(" "),
     _c(
       "table",
@@ -8021,13 +8077,25 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
+                _vm._m(1),
+                _vm._v(" "),
+                _c("p", { staticClass: "p-form__notion" }, [
+                  _vm._v("※除外ワードは複数ワードを指定することができません。")
+                ]),
+                _vm._v(" "),
                 _c("p", { staticClass: "p-form__notion" }, [
                   _vm._v(
-                    "※複数ワードを指定する際は、「ツイッター 神」のように半角スペースで区切ってください。"
+                    "※条件タイプが「次のワードを含む」を選んだ際に、キーワードが複数の場合には複数ワードが全て含まれる条件に該当するものが抽出されます。"
                   )
                 ]),
                 _vm._v(" "),
-                _vm._m(1)
+                _c("p", { staticClass: "p-form__notion" }, [
+                  _vm._v(
+                    "※条件タイプが「いずれかのワードを含む」を選んだ際に、キーワードが複数の場合には複数ワードの一つでも含まれている条件に該当するものが抽出されます。"
+                  )
+                ]),
+                _vm._v(" "),
+                _vm._m(2)
               ]
             )
           ])
@@ -8202,13 +8270,25 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
+                _vm._m(3),
+                _vm._v(" "),
+                _c("p", { staticClass: "p-form__notion" }, [
+                  _vm._v("※除外ワードは複数ワードを指定することができません。")
+                ]),
+                _vm._v(" "),
                 _c("p", { staticClass: "p-form__notion" }, [
                   _vm._v(
-                    "※複数ワードを指定する際は、「ツイッター 神」のように半角スペースで区切ってください。"
+                    "※条件タイプが「次のワードを含む」を選んだ際は、キーワードが複数の場合には複数ワードが全て含まれる条件に該当するものが抽出されます。"
                   )
                 ]),
                 _vm._v(" "),
-                _vm._m(2)
+                _c("p", { staticClass: "p-form__notion" }, [
+                  _vm._v(
+                    "※条件タイプが「いずれかのワードを含む」を選んだ際は、キーワードが複数の場合には複数ワードの一つでも含まれている条件に該当するものが抽出されます。"
+                  )
+                ]),
+                _vm._v(" "),
+                _vm._m(4)
               ]
             )
           ])
@@ -8244,6 +8324,18 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "p-form__notion" }, [
+      _vm._v("※複数ワードを指定する際は、「ツイッター 神」のように"),
+      _c("span", { staticClass: "u-color__font--red" }, [
+        _vm._v("半角スペース")
+      ]),
+      _vm._v("でで区切ってください。")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "p-form__button" }, [
       _c(
         "button",
@@ -8253,6 +8345,18 @@ var staticRenderFns = [
         },
         [_vm._v("追加")]
       )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", { staticClass: "p-form__notion" }, [
+      _vm._v("※複数ワードを指定する際は、「ツイッター 神」のように"),
+      _c("span", { staticClass: "u-color__font--red" }, [
+        _vm._v("半角スペース")
+      ]),
+      _vm._v("で区切ってください。")
     ])
   },
   function() {
@@ -8362,6 +8466,12 @@ var render = function() {
           _c("i", { staticClass: "c-icon c-icon--white fas fa-plus" }),
           _vm._v("\n            ターゲットを追加\n        ")
         ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "※ 自動フォロー機能は全てのターゲットアカウントリストのフォローが完了した場合、自動的にフォロー完了メールが送られます。"
       )
     ]),
     _vm._v(" "),
@@ -8614,6 +8724,12 @@ var render = function() {
                 _vm._v(" "),
                 _c("p", { staticClass: "p-form__notion" }, [
                   _vm._v(
+                    "※ターゲット名は、Twitterのユーザー名の「@」を除いて入力してください"
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "p-form__notion" }, [
+                  _vm._v(
                     "※条件のキーワードは、「キーワード登録」から登録することができます。"
                   )
                 ]),
@@ -8794,6 +8910,12 @@ var render = function() {
                 _vm._v(" "),
                 _c("p", { staticClass: "p-form__notion" }, [
                   _vm._v(
+                    "※ターゲット名は、Twitterのユーザー名の「@」を除いて入力してください"
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "p-form__notion" }, [
+                  _vm._v(
                     "※条件のキーワードは、「キーワード登録」から登録することができます。"
                   )
                 ]),
@@ -8952,6 +9074,12 @@ var render = function() {
           _c("i", { staticClass: "c-icon c-icon--white fas fa-plus" }),
           _vm._v("\n            いいね設定を追加\n        ")
         ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "※ 自動いいね機能はいいね条件に該当するツイートを全ていいねした後に、自動いいね完了メールが送信されます。"
       )
     ]),
     _vm._v(" "),
@@ -10035,22 +10163,27 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("main", { staticClass: "l-main" }, [
-      _c("div", { staticClass: "l-contents" }, [
-        _c("div", { staticClass: "p-contents__area" }, [
-          _c("p", [_vm._v("システムエラーが発生しました。")])
-        ])
-      ])
+  return _c("main", { staticClass: "l-main" }, [
+    _c("div", { staticClass: "l-contents" }, [
+      _c(
+        "div",
+        { staticClass: "p-contents__area" },
+        [
+          _c("p", [_vm._v("しばらく経ってからご利用ください")]),
+          _c("br"),
+          _vm._v(" "),
+          _c(
+            "RouterLink",
+            { staticClass: "c-button c-button--inverse", attrs: { to: "/" } },
+            [_vm._v("前の画面へ戻る")]
+          )
+        ],
+        1
+      )
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -10455,6 +10588,54 @@ var render = function() {
                         }
                       }
                     }),
+                    _vm._v(" "),
+                    _c("label", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.loginForm.remember,
+                            expression: "loginForm.remember"
+                          }
+                        ],
+                        attrs: { type: "checkbox", id: "login-remember" },
+                        domProps: {
+                          checked: Array.isArray(_vm.loginForm.remember)
+                            ? _vm._i(_vm.loginForm.remember, null) > -1
+                            : _vm.loginForm.remember
+                        },
+                        on: {
+                          change: function($event) {
+                            var $$a = _vm.loginForm.remember,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? true : false
+                            if (Array.isArray($$a)) {
+                              var $$v = null,
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    _vm.loginForm,
+                                    "remember",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    _vm.loginForm,
+                                    "remember",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(_vm.loginForm, "remember", $$c)
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v("ログイン状態を保持する\n                        ")
+                    ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "p-form__button" }, [
                       _c(

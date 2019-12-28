@@ -21,7 +21,7 @@
                 いいね設定を追加
             </button>
         </div>
-
+        <p>※ 自動いいね機能はいいね条件に該当するツイートを全ていいねした後に、自動いいね完了メールが送信されます。</p>
         <table class="p-table">
             <tr class="p-table__head">
                 <th class="p-table__th p-table__th--like">いいね条件</th>

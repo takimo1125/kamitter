@@ -65,7 +65,7 @@ class FilterWord extends Model
         $type_string = self::TYPE[$type]['label'];
         $word = $this->attributes['word'];
         $remove = $this->attributes['remove'];
-        return "$type_string ： [$word] \n 除外ワード：[$remove]";
+        return "$type_string \n [$word] \n\n 除外ワード\n[$remove]";
     }
     /**
      * 登録されたワードと除外ワードを

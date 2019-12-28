@@ -21,6 +21,7 @@
                 ターゲットを追加
             </button>
         </div>
+        <p>※ 自動フォロー機能は全てのターゲットアカウントリストのフォローが完了した場合、自動的にフォロー完了メールが送られます。</p>
 
         <table class="p-table">
             <tr class="p-table__head">
@@ -78,6 +79,7 @@
                             <option v-for="(filter,index) in filters" :value="filter.id" :key='index'>{{filter.merged_word}}</option>
                             <optgroup></optgroup>
                         </select>
+                        <p class="p-form__notion">※ターゲット名は、Twitterのユーザー名の「@」を除いて入力してください</p>
                         <p class="p-form__notion">※条件のキーワードは、「キーワード登録」から登録することができます。</p>
                         <div class="p-form__button">
                             <button type="submit" class="c-button c-button--twitter">追加</button>
@@ -114,6 +116,7 @@
                             <option v-for="(filter,index) in filters" :key="index" :value="filter.id" >{{filter.merged_word}}</option>
                             <optgroup></optgroup>
                         </select>
+                        <p class="p-form__notion">※ターゲット名は、Twitterのユーザー名の「@」を除いて入力してください</p>
                         <p class="p-form__notion">※条件のキーワードは、「キーワード登録」から登録することができます。</p>
                         <div class="p-form__button">
                             <button type="submit" class="c-button c-button--twitter">編集</button>

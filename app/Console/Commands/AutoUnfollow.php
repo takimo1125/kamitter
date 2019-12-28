@@ -1,12 +1,15 @@
 <?php
 namespace App\Console\Commands;
-use App\Http\Components\TwitterApi;
-use App\SystemManager;
 use App\TwitterUser;
+use App\SystemManager;
 use App\UnfollowTarget;
-use Illuminate\Console\Command;
 use App\UnfollowHistory;
+use App\Mail\CompleteUnFollow;
+use Illuminate\Console\Command;
+use App\Http\Components\TwitterApi;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
+
 class AutoUnfollow extends Command
 {
     /**
@@ -31,7 +34,7 @@ class AutoUnfollow extends Command
         parent::__construct();
     }
     const API_URL_UNFOLLOW = 'friendships/destroy';
-    const FOLLOWER_NUMBER_FOR_ENTRY_UNFOLLOW = 5000;
+    const FOLLOWER_NUMBER_FOR_ENTRY_UNFOLLOW = 1;
     const INTERVAL_HOURS = 1;
     const API_PER_A_DAY = 24 / self::INTERVAL_HOURS;
     const UNFOLLOW_RATE_MAX = 150;
@@ -114,7 +117,25 @@ class AutoUnfollow extends Command
                 return;
             }
         }
+        // 全てのアンフォロワーターゲットをアンフォローした時点で自動アンフォロー完了
+        $target_quantity = UnfollowTarget::where('twitter_user_id', $twitter_user_id)->count();
+        if($target_quantity === 0){
+            Log::info('##アンフォローワーターゲットのフォローが完了しました');
+            $this->sendMail($system_manager_id, $twitter_user_id);
+        }
         Log::info('##自動アンフォロー完了');
+    }
+    /**
+     * 自動アンフォロー完了メールを送信する
+     * @param $system_manager_id
+     * @param $twitter_user_id
+     */
+    private function sendMail($system_manager_id, $twitter_user_id)
+    {
+        $system_manager = SystemManager::with('user')->find($system_manager_id);
+        $twitter_user = TwitterUser::find($twitter_user_id);
+        $user = $system_manager->user;
+        Mail::to($user)->send(new CompleteUnFollow($user, $twitter_user));
     }
     /**
      * アンフォローターゲットをアンフォロー履歴に移動する
