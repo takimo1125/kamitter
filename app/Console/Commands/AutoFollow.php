@@ -93,8 +93,10 @@ class AutoFollow extends Command
              */
             $follower_target_list = FollowerTarget::where('twitter_user_id', $twitter_user_id)
                 ->with('twitterUser')->get();
+            $follower_target_list_count = FollowerTarget::where('twitter_user_id', $twitter_user_id)
+                ->with('twitterUser')->get()->count();
             //フォロワーターゲットリストがない場合は次のユーザーへ
-            if (is_null($follower_target_list)) {
+            if (is_null($follower_target_list)|| $follower_target_list_count === 0) {
                 Log:info('#フォロワーターゲットリストが0件');
                 Log::info('#次のユーザーにスキップ');
                 continue;
@@ -259,9 +261,16 @@ class AutoFollow extends Command
             if ($flg_skip_to_next_user === true) {
                 return;
             }
-            //取得したフォロワーのリストから、フォロワーターゲットリストに追加
-            $this->addToFollowerTargetList($api_result, $filter_word, $twitter_user_id);
-            $cursor = $api_result->next_cursor_str;
+            if(!property_exists($api_result, 'error')){
+                //取得したフォロワーのリストから、フォロワーターゲットリストに追加
+                $this->addToFollowerTargetList($api_result, $filter_word, $twitter_user_id);
+                $cursor = $api_result->next_cursor_str;
+            }else{
+                //非公開ユーザーの場合は、エラーチェックで入らないようにしているが、
+                //もし入っていた場合はフォローターゲットのステータスを変えて、次のユーザーへ飛ばす
+                break;
+            }
+
             //APIのフォロワーリストで次ページがなければ終了
         } while ($cursor !== "0");
         $follow_target->status = $created_status;

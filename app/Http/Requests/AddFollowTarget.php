@@ -2,8 +2,10 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use App\Rules\ApiTwitterUserExist;
+use App\Rules\ApiTwitterUserProtected;
+use Illuminate\Foundation\Http\FormRequest;
+
 class AddFollowTarget extends FormRequest
 {
     /**
@@ -25,7 +27,8 @@ class AddFollowTarget extends FormRequest
     {
         return [
             //apiTwiterUserExistは入力されたscreenのユーザーが存在するかチェックする
-            'target' => ["required", "max:15", "regex:/^[a-zA-Z0-9_]+$/i", new ApiTwitterUserExist],
+            ////apiTwiterUserExistは入力されたscreenのユーザーが非公開ユーザーかチェックする
+            'target' => ["required", "max:15", "regex:/^[a-zA-Z0-9_]+$/i", new ApiTwitterUserExist, new ApiTwitterUserProtected],
             'filter_word_id' => 'required',
         ];
     }

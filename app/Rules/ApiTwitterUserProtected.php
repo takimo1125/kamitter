@@ -6,7 +6,7 @@ use App\TwitterUser;
 use App\Http\Components\TwitterApi;
 use Illuminate\Contracts\Validation\Rule;
 
-class ApiTwitterUserExist implements Rule
+class ApiTwitterUserProtected implements Rule
 {
     /**
      * Create a new rule instance.
@@ -27,19 +27,18 @@ class ApiTwitterUserExist implements Rule
      */
     public function passes($attribute, $value)
     {
-        /**
-         * 指定のscreen_nameのツイッターユーザーが存在しているかをチェック
-         * 存在していればtrueを返す、存在しなければfalseを返す
-         */
+       /**
+        * 指定のscreen_nameのツイッターユーザーが公開ユーザかをチェック
+        * 存在していればtrueを返す、存在しなければfalseを返す
+        */
         $twitter_user_id = session()->get('twitter_id');
         $twitter_user = TwitterUser::where('id', $twitter_user_id)->with('systemManagers')->first();
-        $system_manager_id = $twitter_user->systemManagers[0]->id;
         if( is_null($twitter_user)){
             return false;
         }
         $api_result = TwitterApi::getUsersShow($twitter_user, $value);
         info('result', [$api_result]);
-        $api_error_flg = TwitterApi::handleApiError($api_result, $system_manager_id, $twitter_user_id);
+        $api_error_flg = $api_result->protected;
         if ($api_error_flg) {
             return false;
         }
@@ -53,6 +52,6 @@ class ApiTwitterUserExist implements Rule
      */
     public function message()
     {
-        return '指定のTwitterユーザーは存在しません。';
+        return '指定のTwitterユーザーは非公開ユーザーなのでターゲット名に登録できません。';
     }
 }
