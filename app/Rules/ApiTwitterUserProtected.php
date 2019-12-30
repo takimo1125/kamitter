@@ -38,9 +38,11 @@ class ApiTwitterUserProtected implements Rule
         }
         $api_result = TwitterApi::getUsersShow($twitter_user, $value);
         info('result', [$api_result]);
-        $api_error_flg = $api_result->protected;
-        if ($api_error_flg) {
-            return false;
+        //ツイッターユーザーが公開ユーザか
+        if (property_exists($api_result, 'protected')) {
+            if($api_result->protected){
+                return false;
+            }
         }
         return true;
     }
