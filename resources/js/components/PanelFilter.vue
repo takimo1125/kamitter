@@ -65,7 +65,7 @@
                         <label class="p-form__label" for="remove_word">除外ワード</label>
                         <input type="text" class="p-form__item" id="remove_word"
                                v-model="addForm.remove" maxlength="50">
-                        <p class="p-form__notion">※複数ワードを指定する際は、「ツイッター 神」のようにスペースで区切ってください。</p>
+                        <p class="p-form__notion">※キーワードと除外ワードで複数ワードを指定する際は、「ツイッター 神」のようにスペースで区切ってください。</p>
                         <p class="p-form__notion">※条件タイプが「次のワードを含む」を選んだ際に、キーワードが複数の場合には複数ワードが全て含まれる条件に該当するものが抽出されます。</p>
                         <p class="p-form__notion">※条件タイプが「いずれかのワードを含む」を選んだ際に、キーワードが複数の場合には複数ワードの一つでも含まれている条件に該当するものが抽出されます。</p>
                         <div class="p-form__button">
@@ -95,7 +95,7 @@
                         <label class="p-form__label" for="edit-remove_keyword">除外ワード</label>
                         <input type="text" class="p-form__item" id="edit-remove_keyword"
                                v-model="editForm.remove" maxlength="50">
-                        <p class="p-form__notion">※複数ワードを指定する際は、「ツイッター 神」のようにスペースで区切ってください。</p>
+                        <p class="p-form__notion">※キーワードと除外ワードで複数ワードを指定する際は、「ツイッター 神」のようにスペースで区切ってください。</p>
                         <p class="p-form__notion">※条件タイプが「次のワードを含む」を選んだ際は、キーワードが複数の場合には複数ワードが全て含まれる条件に該当するものが抽出されます。</p>
                         <p class="p-form__notion">※条件タイプが「いずれかのワードを含む」を選んだ際は、キーワードが複数の場合には複数ワードの一つでも含まれている条件に該当するものが抽出されます。</p>
                         <div class="p-form__button">
