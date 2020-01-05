@@ -14,7 +14,7 @@
     text-decoration: none;
     transition: all 0.2s;
     @include mq(){
-        padding: 0.5rem 0.7rem;
+        padding: 0.7rem 0.7rem;
         font-size: 0.7rem;
     }
     &:hover{

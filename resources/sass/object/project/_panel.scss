@@ -1,0 +1,61 @@
+// ==================================
+// panel
+// ==================================
+.p-panel {
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    transition: .5s;
+    &-hover {
+      display: inline-block;
+      transition: .5s;
+      &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+        transition: .5s;
+      }
+    }
+    &-border {
+      border-radius: 5px;
+      border: 5px solid #f6f5f4;
+    }
+    &-head, &-foot {
+      padding: $space_m;
+    }
+    &-head {
+      text-align: center;
+      color: $color-icon-gray;
+    }
+    &-active {
+      border: 5px solid $color-bg;
+    }
+    &-group {
+      margin-right: -$space_l;
+      &-float {
+        overflow: hidden;
+      }
+      &-flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .p-panel {
+        float: left;
+        margin-right: $space_l;
+        margin-bottom: $space_l;
+        box-sizing: border-box;
+      }
+    }
+    &-staff {
+      width: calc(25% - #{$space_l});
+      @include mq() {
+        width: calc(50% - #{$space_l});
+      }
+    }
+    &-menu {
+      width: calc(33.3% - #{$space_l});
+      @include mq() {
+        width: 100%;
+        margin: 0 auto $space_l auto;
+      }
+    }
+  }

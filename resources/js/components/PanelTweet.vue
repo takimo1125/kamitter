@@ -12,7 +12,8 @@
                     @click.stop="stopTweetService">停止
             </button>
         </div>
-
+        <p class="p-dashboard__notion">※ 自動ツイート機能は指定した時刻に指定の内容で自動でツイートいたします。</p><br />
+        <p class="p-dashboard__notion">※ 自動ツイート機能は指定の時刻にツイートが完了した際に完了メールを送信いたします。<p><br />
 
         <div class="p-table__title">
             <h2 class="p-table__caption">○自動ツイートリスト</h2>

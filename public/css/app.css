@@ -240,7 +240,7 @@ img {
 
 @media screen and (max-width: 960px) {
   .c-button {
-    padding: 0.5rem 0.7rem;
+    padding: 0.7rem 0.7rem;
     font-size: 0.7rem;
   }
 }
@@ -385,6 +385,39 @@ img {
 
 .c-icon--white {
   color: #fff;
+}
+
+.p-container {
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+@media screen and (max-width: 960px) {
+  .p-container {
+    width: 100%;
+  }
+}
+
+.p-container-fluid {
+  width: 100%;
+}
+
+.p-container-title {
+  font-family: "Crimson Text", "\30D2\30E9\30AE\30CE\89D2\30B4\30B7\30C3\30AF   Pro", "Hiragino Kaku Gothic Pro", "Noto Sans JP", sans-serif;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 960px) {
+  .p-container-title {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .p-contents__area {
@@ -538,6 +571,14 @@ img {
   border: 1px solid #dc3545;
   border-radius: 5px;
   list-style: none;
+}
+
+.p-home {
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 20px;
+  -webkit-box-pack: center;
+  justify-content: center;
 }
 
 .p-login {
@@ -768,6 +809,89 @@ img {
 @media screen and (max-width: 960px) {
   .p-profile__name {
     font-size: 16px;
+  }
+}
+
+.p-panel {
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.p-panel-hover {
+  display: inline-block;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.p-panel-hover:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.p-panel-border {
+  border-radius: 5px;
+  border: 5px solid #f6f5f4;
+}
+
+.p-panel-head,
+.p-panel-foot {
+  padding: 10px;
+}
+
+.p-panel-head {
+  text-align: center;
+  color: #6c757d;
+}
+
+.p-panel-active {
+  border: 5px solid #f3ede5;
+}
+
+.p-panel-group {
+  margin-right: -15px;
+}
+
+.p-panel-group-float {
+  overflow: hidden;
+}
+
+.p-panel-group-flex {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-panel-group .p-panel {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.p-panel-staff {
+  width: calc(25% - 15px);
+}
+
+@media screen and (max-width: 960px) {
+  .p-panel-staff {
+    width: calc(50% - 15px);
+  }
+}
+
+.p-panel-menu {
+  width: calc(33.3% - 15px);
+}
+
+@media screen and (max-width: 960px) {
+  .p-panel-menu {
+    width: 100%;
+    margin: 0 auto 15px auto;
   }
 }
 
@@ -1007,7 +1131,8 @@ img {
 
 @media screen and (max-width: 960px) {
   .p-twitter__card {
-    height: 60px;
+    height: 62px;
+    overflow: scroll;
   }
 }
 
@@ -1118,6 +1243,15 @@ img {
   margin-right: 10px;
 }
 
+.u-align-center {
+  text-align: center;
+}
+
+.u-bgColor-lightGray {
+  background: #f8f7fc;
+  box-shadow: 0px 0px 8px 2px #ddd inset;
+}
+
 .u-color__bg--white {
   background: #fff;
 }
@@ -1141,6 +1275,19 @@ img {
           justify-content: space-between;
   -webkit-box-align: center;
           align-items: center;
+}
+
+.u-ft-corp {
+  font-weight: bold;
+  font-family: "Crimson Text", "\30D2\30E9\30AE\30CE\89D2\30B4\30B7\30C3\30AF   Pro", "Hiragino Kaku Gothic Pro", "Noto Sans JP", sans-serif;
+}
+
+.u-ft-l {
+  font-size: 24px;
+}
+
+.u-ft-xl {
+  font-size: 18px;
 }
 
 .t-twitter_card-leave {

@@ -71,8 +71,8 @@ class FilterWordController extends Controller
             abort(404);
         }
         $user_filter->type = $request->type;
-        $user_filter->word = $request->word;
-        $user_filter->remove = $request->remove;
+        $user_filter->word = $this->adjustWordStyle($request->word);
+        $user_filter->remove = $this->adjustWordStyle($request->remove);
         $user_filter->save();
         return response($user_filter, 200);
     }

@@ -8,7 +8,6 @@
             </button>
         </div>
 
-                <p class="p-dashboard__notion">※ 除外ワードは複数ワードを指定することができません。</p><br />
         <p class="p-dashboard__notion">※ 条件タイプが「次のワードを含む」を選んだ際は、キーワードが複数の場合には複数ワードが全て含まれる条件に該当するものが抽出されます。</p><br />
         <p class="p-dashboard__notion">※ 条件タイプが「いずれかのワードを含む」を選んだ際は、キーワードが複数の場合には複数ワードの一つでも含まれている条件に該当するものが抽出されます。</p><br />
         <p class="p-dashboard__notion">※ 自動いいね機能でキーワードを設定した場合は、登録されたキーワードをつぶやいたツイートをいいねします。除外ワードが含まれていた場合は、いいねしません。</p><br />
@@ -66,8 +65,7 @@
                         <label class="p-form__label" for="remove_word">除外ワード</label>
                         <input type="text" class="p-form__item" id="remove_word"
                                v-model="addForm.remove" maxlength="50">
-                        <p class="p-form__notion">※複数ワードを指定する際は、「ツイッター 神」のように<span class="u-color__font--red">半角スペース</span>でで区切ってください。</p>
-                        <p class="p-form__notion">※除外ワードは複数ワードを指定することができません。</p>
+                        <p class="p-form__notion">※複数ワードを指定する際は、「ツイッター 神」のようにスペースで区切ってください。</p>
                         <p class="p-form__notion">※条件タイプが「次のワードを含む」を選んだ際に、キーワードが複数の場合には複数ワードが全て含まれる条件に該当するものが抽出されます。</p>
                         <p class="p-form__notion">※条件タイプが「いずれかのワードを含む」を選んだ際に、キーワードが複数の場合には複数ワードの一つでも含まれている条件に該当するものが抽出されます。</p>
                         <div class="p-form__button">
@@ -97,8 +95,7 @@
                         <label class="p-form__label" for="edit-remove_keyword">除外ワード</label>
                         <input type="text" class="p-form__item" id="edit-remove_keyword"
                                v-model="editForm.remove" maxlength="50">
-                        <p class="p-form__notion">※複数ワードを指定する際は、「ツイッター 神」のように<span class="u-color__font--red">半角スペース</span>で区切ってください。</p>
-                        <p class="p-form__notion">※除外ワードは複数ワードを指定することができません。</p>
+                        <p class="p-form__notion">※複数ワードを指定する際は、「ツイッター 神」のようにスペースで区切ってください。</p>
                         <p class="p-form__notion">※条件タイプが「次のワードを含む」を選んだ際は、キーワードが複数の場合には複数ワードが全て含まれる条件に該当するものが抽出されます。</p>
                         <p class="p-form__notion">※条件タイプが「いずれかのワードを含む」を選んだ際は、キーワードが複数の場合には複数ワードの一つでも含まれている条件に該当するものが抽出されます。</p>
                         <div class="p-form__button">

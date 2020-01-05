@@ -34,7 +34,7 @@ class AutoUnfollow extends Command
         parent::__construct();
     }
     const API_URL_UNFOLLOW = 'friendships/destroy';
-    const FOLLOWER_NUMBER_FOR_ENTRY_UNFOLLOW = 1;
+    const FOLLOWER_NUMBER_FOR_ENTRY_UNFOLLOW = 5000;
     const INTERVAL_HOURS = 1;
     const API_PER_A_DAY = 24 / self::INTERVAL_HOURS;
     const UNFOLLOW_RATE_MAX = 150;
@@ -55,7 +55,7 @@ class AutoUnfollow extends Command
             $twitter_user_id = $auto_unfollow_running_status_item->twitter_user_id;
             Log::info('#system_manager_id : ', [$system_manager_id]);
             Log::info('#twitter_user_id : ' , [$twitter_user_id]);
-            //現在のフォロワー数の確認
+            //現在のフォロー数の確認
             $follower = $this->getTwitterFollowerNum($system_manager_id, $twitter_user_id);
             if ($this->isFollowerOverEntryNumber($follower)) {
                 $this->changeAutoUnfollowStatusToStop($auto_unfollow_running_status_item);
@@ -184,6 +184,6 @@ class AutoUnfollow extends Command
         if ($flg_skip_to_next_user === true) {
             return 0;
         }
-        return $api_result->followers_count;
+        return $api_result->friends_count;
     }
 }

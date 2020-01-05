@@ -21,7 +21,9 @@
                 いいね設定を追加
             </button>
         </div>
-        <p>※ 自動いいね機能はいいね条件に該当するツイートを全ていいねした後に、自動いいね完了メールが送信されます。</p>
+        <p class="p-dashboard__notion">※ 自動いいね機能はいいね条件に該当するツイートを全ていいねした後に、自動いいね完了メールが送信されます。</p><br />
+        <p class="p-dashboard__notion">※ キーワードを設定した場合は、登録されたキーワードをつぶやいたツイートをいいねします。除外ワードが含まれていた場合は、いいねしません。</p><br />
+        <p class="p-dashboard__notion">※ 毎時45分に自動いいね機能を実行いたします。</p><br />
         <table class="p-table">
             <tr class="p-table__head">
                 <th class="p-table__th p-table__th--like">いいね条件</th>

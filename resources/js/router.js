@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard.vue'
 import Error from './pages/500Error.vue'
 import NotFound from './pages/NotFound.vue'
 import Password from './pages/PasswordReset.vue'
+import Top from './pages/Top.vue'
 
 import store from './store'
 
@@ -75,6 +76,7 @@ const routes = [
     },
     {
         path: '/',
+        component: Top,
         beforeEnter(to, from, next) {
             const auth = store.getters['auth/check']
             if (auth && store.getters['auth/checkTwitterId']) {
@@ -82,7 +84,7 @@ const routes = [
             } else if (auth) {
                 next('/twitter')
             } else {
-                next('/login')
+                next()
             }
         }
     },
