@@ -2601,6 +2601,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -8533,6 +8534,13 @@ var render = function() {
     _c("p", { staticClass: "p-dashboard__notion" }, [
       _vm._v(
         "※ 自動フォロー機能でキーワードを設定した場合は、ターゲットアカウントのフォロワーから登録されたキーワードがTwitterのプロフィールに含まれたユーザーを抽出し、「フォロワーターゲットリスト」を作成します。プロフィール欄に除外ワードが含まれていた場合のターゲットアカウントのフォロワーは、抽出しません。"
+      )
+    ]),
+    _c("br"),
+    _vm._v(" "),
+    _c("p", { staticClass: "p-dashboard__notion" }, [
+      _vm._v(
+        "※ 「フォロワーターゲットリスト」は日本人以外と自動アンフォロー機能でアンフォローしたアカウントを「フォロワーターゲットリスト」には含めません。"
       )
     ]),
     _c("br"),
