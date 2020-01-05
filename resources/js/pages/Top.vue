@@ -8,9 +8,7 @@
             <section class="p-container">
                 <h2 class="p-container-title"><span class="p-container-span">ABOUT</span></h2>
                 <div class="p-container-body">
-                    <p>「神ったー」はTwitter自動・効率化ツールです。神ったーの機能は、自動ツイート、自動フォロー、自
-                        動アンフォロー、自動いいねの四つの自動機能が使用できます。
-                    </p>
+                    <p>「神ったー」はTwitter自動・効率化ツールです。神ったーの機能は、自動ツイート、自動フォロー、自動アンフォロー、自動いいねの四つの自動機能が使用できます。</p>
                 </div>
             </section>
         </div>

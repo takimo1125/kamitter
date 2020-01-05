@@ -5100,8 +5100,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -11516,7 +11514,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "p-container-body" }, [
           _c("p", [
             _vm._v(
-              "「神ったー」はTwitter自動・効率化ツールです。神ったーの機能は、自動ツイート、自動フォロー、自\n                    動アンフォロー、自動いいねの四つの自動機能が使用できます。\n                "
+              "「神ったー」はTwitter自動・効率化ツールです。神ったーの機能は、自動ツイート、自動フォロー、自動アンフォロー、自動いいねの四つの自動機能が使用できます。"
             )
           ])
         ])
