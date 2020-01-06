@@ -8589,7 +8589,7 @@ var render = function() {
               [
                 followTarget.status_label !== "リスト作成済"
                   ? [
-                      followTarget.status_label !== "待機中"
+                      followTarget.status_label !== "リスト作成中"
                         ? _c(
                             "button",
                             {

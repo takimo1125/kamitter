@@ -41,7 +41,7 @@
                     <template v-if="followTarget.status_label !== 'リスト作成済' ">
                         <button class="c-button c-button--twitter p-table__button"
                                 @click.stop="showEditModal(followTarget, index)"
-                                v-if="followTarget.status_label !== '待機中' "
+                                v-if="followTarget.status_label !== 'リスト作成中' "
                         >編集
                         </button>
                         <button class="c-button c-button--danger p-table__button"
