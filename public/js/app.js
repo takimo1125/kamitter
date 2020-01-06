@@ -2602,6 +2602,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -8540,7 +8541,7 @@ var render = function() {
     _vm._v(" "),
     _c("p", { staticClass: "p-dashboard__notion" }, [
       _vm._v(
-        "※ 「フォロワーターゲットリスト」は日本人以外と自動アンフォロー機能でアンフォローしたアカウントを「フォロワーターゲットリスト」には含めません。"
+        "※ 「フォロワーターゲットリスト」は日本語の５０音がプロフィールに含まれていないアカウントと自動アンフォロー機能でアンフォローしたアカウントを「フォロワーターゲットリスト」には含めません。"
       )
     ]),
     _c("br"),
@@ -8586,22 +8587,24 @@ var render = function() {
               "td",
               { staticClass: "p-table__btnarea" },
               [
-                followTarget.status_label === "待機中"
+                followTarget.status_label !== "リスト作成済"
                   ? [
-                      _c(
-                        "button",
-                        {
-                          staticClass:
-                            "c-button c-button--twitter p-table__button",
-                          on: {
-                            click: function($event) {
-                              $event.stopPropagation()
-                              return _vm.showEditModal(followTarget, index)
-                            }
-                          }
-                        },
-                        [_vm._v("編集\n                    ")]
-                      ),
+                      followTarget.status_label !== "待機中"
+                        ? _c(
+                            "button",
+                            {
+                              staticClass:
+                                "c-button c-button--twitter p-table__button",
+                              on: {
+                                click: function($event) {
+                                  $event.stopPropagation()
+                                  return _vm.showEditModal(followTarget, index)
+                                }
+                              }
+                            },
+                            [_vm._v("編集\n                    ")]
+                          )
+                        : _vm._e(),
                       _vm._v(" "),
                       _c(
                         "button",

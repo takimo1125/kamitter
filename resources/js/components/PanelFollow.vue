@@ -23,7 +23,7 @@
         </div>
         <p class="p-dashboard__notion">※ 自動フォロー機能は全てのターゲットアカウントリストで作成された「フォロワーターゲットリスト」のフォローが完了した場合、自動的にフォロー完了メールが送られます。</p><br />
         <p class="p-dashboard__notion">※ 自動フォロー機能でキーワードを設定した場合は、ターゲットアカウントのフォロワーから登録されたキーワードがTwitterのプロフィールに含まれたユーザーを抽出し、「フォロワーターゲットリスト」を作成します。プロフィール欄に除外ワードが含まれていた場合のターゲットアカウントのフォロワーは、抽出しません。</p><br />
-        <p class="p-dashboard__notion">※ 「フォロワーターゲットリスト」は日本人以外と自動アンフォロー機能でアンフォローしたアカウントを「フォロワーターゲットリスト」には含めません。</p><br />
+        <p class="p-dashboard__notion">※ 「フォロワーターゲットリスト」は日本語の５０音がプロフィールに含まれていないアカウントと自動アンフォロー機能でアンフォローしたアカウントを「フォロワーターゲットリスト」には含めません。</p><br />
         <p class="p-dashboard__notion">※ 自動フォロー機能は2時間に一度実行いたします。</p><br />
         <table class="p-table">
             <tr class="p-table__head">
@@ -38,9 +38,10 @@
                 <td aria-label="ターゲット" class="p-table__td">@{{followTarget.target}}</td>
                 <td aria-label="条件" class="p-table__td">{{followTarget.filter_word.merged_word}}</td>
                 <td class="p-table__btnarea">
-                    <template v-if="followTarget.status_label === '待機中' ">
+                    <template v-if="followTarget.status_label !== 'リスト作成済' ">
                         <button class="c-button c-button--twitter p-table__button"
                                 @click.stop="showEditModal(followTarget, index)"
+                                v-if="followTarget.status_label !== '待機中' "
                         >編集
                         </button>
                         <button class="c-button c-button--danger p-table__button"
