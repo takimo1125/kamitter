@@ -5,7 +5,7 @@
 
 <p>
     Twitterアカウント :
-    @{{ $twitter_user->screen }}<br>
+    {{ $twitter_user->screen }}<br>
     にて自動いいねが完了しました。
 </p>
 
