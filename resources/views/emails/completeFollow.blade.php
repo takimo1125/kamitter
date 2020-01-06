@@ -4,7 +4,7 @@
 </p>
 
 <p>
-    Twitterアカウント :
+    Twitterアカウント :@
     {{ $twitter_user->screen }}<br>
     にてフォロワーターゲットリストの自動フォローが完了しました。
 </p>

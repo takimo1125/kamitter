@@ -4,7 +4,7 @@
 </p>
 
 <p>
-    Twitterアカウント :
+    Twitterアカウント :@
     {{ $twitter_user->screen }}<br>
     にて自動ツイートが完了しました。
 </p>
