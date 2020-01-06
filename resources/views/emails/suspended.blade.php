@@ -4,8 +4,8 @@
 </p>
 
 <p>
-    Twitterアカウント :@
-    {{ $twitter_user->screen }}<br>
+    Twitterアカウント :
+    @{{ $twitter_user->screen }}<br>
     が凍結された可能性がございます。
 </p>
 

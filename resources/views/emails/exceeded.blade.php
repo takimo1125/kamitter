@@ -4,8 +4,8 @@
 </p>
 
 <p>
-    Twitterアカウント :@
-    {{ $twitter_user->screen }}<br>
+    Twitterアカウント :
+    @{{ $twitter_user->screen }}<br>
     にてAPI上限超えたリクエストが確認されました。
 </p>
 
