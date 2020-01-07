@@ -2602,7 +2602,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -4059,7 +4058,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utility__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utility */ "./resources/js/utility.js");
 
-//
 //
 //
 //
@@ -8546,11 +8544,6 @@ var render = function() {
     ]),
     _c("br"),
     _vm._v(" "),
-    _c("p", { staticClass: "p-dashboard__notion" }, [
-      _vm._v("※ 自動フォロー機能は2時間に一度実行いたします。")
-    ]),
-    _c("br"),
-    _vm._v(" "),
     _c(
       "table",
       { staticClass: "p-table" },
@@ -10173,11 +10166,6 @@ var render = function() {
       _vm._v(
         "※ アンフォローリストのアンフォローが全て完了した場合、アンフォロー完了メールが送られます。"
       )
-    ]),
-    _c("br"),
-    _vm._v(" "),
-    _c("p", { staticClass: "p-dashboard__notion" }, [
-      _vm._v("※ 毎時0分にアンフォロー機能が実行されます。")
     ]),
     _c("br")
   ])

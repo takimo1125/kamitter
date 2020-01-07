@@ -33,10 +33,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('auto:follow')->cron('0 */2 * * *');
-        $schedule->command('auto:unfollow')->hourly();
-        $schedule->command('auto:like')->hourlyAt(45);
         $schedule->command('auto:tweet')->everyMinute();
+        $schedule->command('auto:like')->hourlyAt(45);
+        $schedule->command('auto:unfollow')->hourly();
+        $schedule->command('auto:follow')->cron('0 */2 * * *');
         $schedule->command('inspect:followback')->hourlyAt(15);
         $schedule->command('inspect:active')->hourlyAt(30);
     }
