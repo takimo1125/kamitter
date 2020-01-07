@@ -64,9 +64,9 @@ class AutoUnfollow extends Command
                 continue;
             }
             $unfollower_target_list = UnfollowTarget::where('twitter_user_id', $twitter_user_id)
-                ->with('twitterUser')->get();
+                ->get();
             $unfollower_target_list_count = UnfollowTarget::where('twitter_user_id', $twitter_user_id)
-                ->with('twitterUser')->get()->count();
+                ->get()->count();
             //フォロワーターゲットリストがない場合は次のユーザーへ
             if (is_null($unfollower_target_list)|| $unfollower_target_list_count === 0) {
                 Log:info('#アンフォロワーターゲットリストが0件');
