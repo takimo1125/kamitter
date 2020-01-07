@@ -1,6 +1,7 @@
 <?php
 namespace App\Console\Commands;
 use App\TwitterUser;
+use App\FollowHistory;
 use App\SystemManager;
 use App\UnfollowTarget;
 use App\UnfollowHistory;
@@ -149,6 +150,7 @@ class AutoUnfollow extends Command
     }
     /**
      * アンフォローターゲットをアンフォロー履歴に移動する
+     * フォロー履歴のフラグをfalseにする
      * @param $twitter_user_id
      * @param $unfollow_target
      */
@@ -159,6 +161,10 @@ class AutoUnfollow extends Command
         $unfollow_history->twitter_id = $unfollow_target->twitter_id;
         $unfollow_history->save();
         $unfollow_target->delete();
+        $follow_history = FollowHistory::where('twitter_user_id', $twitter_user_id)
+            ->where('twitter_id', $unfollow_target->twitter_id)->first();
+        $follow_history->follow_flg = 0;
+        $follow_history->save();
     }
     /**
      * APIを使用してアンフォローする

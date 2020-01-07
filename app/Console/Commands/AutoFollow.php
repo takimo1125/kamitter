@@ -168,6 +168,7 @@ class AutoFollow extends Command
         $follow_history = new FollowHistory();
         $follow_history->twitter_user_id = $twitter_user_id;
         $follow_history->twitter_id = $follower_target_item->twitter_id;
+        $follow_history->follow_flg = 1;
         $follow_history->save();
         $follower_target_item->delete();
     }

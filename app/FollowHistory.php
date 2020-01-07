@@ -11,5 +11,6 @@ class FollowHistory extends Model
     //
     protected $casts = [
         'twitter_user_id' => 'integer',
+        'follow_flg' => 'boolean',
     ];
 }

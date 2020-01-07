@@ -178,7 +178,7 @@ class InspectActiveUser extends Command
     private function copyFollowHistoryToUnfollowInspect($twitter_user_id)
     {
         //フォローヒストリーをinspectにコピー
-        $follow_histories = FollowHistory::where('twitter_user_id', $twitter_user_id)
+        $follow_histories = FollowHistory::where('twitter_user_id', $twitter_user_id)->where('follow_flg',1)
             ->select('twitter_user_id', 'twitter_id')->get()->toArray();
         data_fill($follow_histories, '*.created_at', Carbon::now()->format('Y-m-d H:i:s'));
         data_fill($follow_histories, '*.updated_at', Carbon::now()->format('Y-m-d H:i:s'));

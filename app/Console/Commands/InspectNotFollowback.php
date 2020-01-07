@@ -95,7 +95,7 @@ class InspectNotFollowback extends Command
     private function getUsersFollowed7daysAgo($twitter_user_id)
     {
         $the_day_7_before = Carbon::today()->addDay(-7);
-        $users = FollowHistory::where('twitter_user_id', $twitter_user_id)
+        $users = FollowHistory::where('twitter_user_id', $twitter_user_id)->where('follow_flg',1)
             ->whereDate('created_at',  '=' , $the_day_7_before)->get();
         return $users;
     }
