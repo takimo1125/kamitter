@@ -22,8 +22,10 @@
             </button>
         </div>
         <p class="p-dashboard__notion">※ 自動フォロー機能は全てのターゲットアカウントリストで作成された「フォロワーターゲットリスト」のフォローが完了した場合、自動的にフォロー完了メールが送られます。</p><br />
-        <p class="p-dashboard__notion">※ 自動フォロー機能でキーワードを設定した場合は、ターゲットアカウントのフォロワーから登録されたキーワードがTwitterのプロフィールに含まれたユーザーを抽出し、「フォロワーターゲットリスト」を作成します。プロフィール欄に除外ワードが含まれていた場合のターゲットアカウントのフォロワーは、抽出しません。</p><br />
-        <p class="p-dashboard__notion">※ 「フォロワーターゲットリスト」は日本語の５０音がプロフィールに含まれていないアカウントと自動アンフォロー機能でアンフォローしたアカウントを「フォロワーターゲットリスト」には含めません。</p><br />
+        <p class="p-dashboard__notion">※ 自動フォロー機能でキーワードを設定した場合は、ターゲットアカウントのフォロワーから登録されたキーワードがTwitterのプロフィールに含まれたユーザーを抽出し、自動フォローするための「フォロワーターゲットリスト」を作成します。プロフィール欄に除外ワードが含まれていた場合のターゲットアカウントのフォロワーは、抽出しません。</p><br />
+        <p class="p-dashboard__notion">※ 「フォロワーターゲットリスト」は自動フォロー機能でフォローするTwitterアカウントのリストです。</p><br />
+        <p class="p-dashboard__notion">※ 「フォロワーターゲットリスト」は日本語の５０音がプロフィールに含まれていないアカウントと自動アンフォロー機能でアンフォローしたアカウントと自動フォロー機能でフォローしてから30日以内にフォロー済みのアカウントを「フォロワーターゲットリスト」には含めません。</p><br />
+        <p class="p-dashboard__notion">※ ターゲットアカウントリストのステータスが「リスト作成中」の時に削除すると、自動フォロー機能を開始している場合は途中まで作成された「フォロワーターゲットリスト」から自動でフォローします。</p><br />
         <table class="p-table">
             <tr class="p-table__head">
                 <th class="p-table__th p-table__th--follow">ステータス</th>
@@ -81,8 +83,8 @@
                             <option v-for="(filter,index) in filters" :value="filter.id" :key='index'>{{filter.merged_word}}</option>
                             <optgroup></optgroup>
                         </select>
-                        <p class="p-form__notion">※ターゲット名は、Twitterのユーザー名の「@」を除いて入力してください</p>
-                        <p class="p-form__notion">※ターゲット名は、Twitterのユーザーに非公開ユーザー（鍵アカウント）を指定できません。</p>
+                        <p class="p-form__notion">※ターゲット名は、Twitterのユーザー名の「@」を除いた部分を入力してください</p>
+                        <p class="p-form__notion">※ターゲット名は、非公開ユーザー（鍵アカウント）を指定できません。</p>
                         <p class="p-form__notion">※条件のキーワードは、「キーワード登録」から登録することができます。</p>
                         <div class="p-form__button">
                             <button type="submit" class="c-button c-button--twitter">追加</button>
@@ -119,8 +121,8 @@
                             <option v-for="(filter,index) in filters" :key="index" :value="filter.id" >{{filter.merged_word}}</option>
                             <optgroup></optgroup>
                         </select>
-                        <p class="p-form__notion">※ターゲット名は、Twitterのユーザー名の「@」を除いて入力してください</p>
-                        <p class="p-form__notion">※ターゲット名は、Twitterのユーザーに非公開ユーザー（鍵アカウント）を指定できません。</p>
+                        <p class="p-form__notion">※ターゲット名は、Twitterのユーザー名の「@」を除いた部分を入力してください</p>
+                        <p class="p-form__notion">※ターゲット名は、非公開ユーザー（鍵アカウント）を指定できません。</p>
                         <p class="p-form__notion">※条件のキーワードは、「キーワード登録」から登録することができます。</p>
                         <div class="p-form__button">
                             <button type="submit" class="c-button c-button--twitter">編集</button>
