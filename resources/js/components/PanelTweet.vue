@@ -78,16 +78,14 @@
                                 placeholder="日付入力"
                                 format="yyyy-MM-dd"
                                 value-format="yyyy-MM-dd"
-                                :picker-options="pickerOptions"
-                                required>
+                                :picker-options="pickerOptions">
                             </el-date-picker>
                             <el-time-picker
                                 v-model="addForm.time"
                                 type="time"
                                 placeholder="時間入力"
                                 format="HH:mm"
-                                value-format="HH:mm"
-                                required>
+                                value-format="HH:mm">
                             </el-time-picker>
                         </div>
                         <div class="p-form__button">
@@ -123,16 +121,14 @@
                                 placeholder="日付入力"
                                 format="yyyy-MM-dd"
                                 value-format="yyyy-MM-dd"
-                                :picker-options="pickerOptions"
-                                required>
+                                :picker-options="pickerOptions">
                             </el-date-picker>
                             <el-time-picker
                                 v-model="editForm.time"
                                 type="time"
                                 placeholder="時間入力"
                                 format="HH:mm"
-                                value-format="HH:mm"
-                                required>
+                                value-format="HH:mm">
                             </el-time-picker>
                         </div>
                         <div class="p-form__button">
