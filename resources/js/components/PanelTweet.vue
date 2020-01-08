@@ -72,11 +72,21 @@
 
                         <label class="p-form__label">ツイート予定日時 *必須</label>
                         <div class="u-display__flex--left">
-                            <input type="date" class="p-form__date"
-                                   :min="getCurrentYYYYMMDD"
-                                   v-model="addForm.date" required>
-                            <input type="time" class="p-form__date"
-                                   v-model="addForm.time" required>
+                            <el-date-picker
+                                v-model="addForm.date"
+                                type="date"
+                                placeholder="日付入力"
+                                format="yyyy-MM-dd"
+                                value-format="yyyy-MM-dd"
+                                :picker-options="pickerOptions">
+                            </el-date-picker>
+                            <el-time-picker
+                                v-model="addForm.time"
+                                type="time"
+                                placeholder="時間入力"
+                                format="HH:mm"
+                                value-format="HH:mm">
+                            </el-time-picker>
                         </div>
                         <div class="p-form__button">
                             <button type="submit" class="c-button c-button--twitter">追加</button>
@@ -105,12 +115,21 @@
 
                         <label class="p-form__label">予定日時 *必須</label>
                         <div class="u-display__flex--left">
-                            <input type="date" class="p-form__date"
-                                   :min="getCurrentYYYYMMDD"
-                                   value="getCurrentYYYYMMDD"
-                                   v-model="editForm.date" required>
-                            <input type="time" class="p-form__date"
-                                   v-model="editForm.time" required>
+                            <el-date-picker
+                                v-model="editForm.date"
+                                type="date"
+                                placeholder="日付入力"
+                                format="yyyy-MM-dd"
+                                value-format="yyyy-MM-dd"
+                                :picker-options="pickerOptions">
+                            </el-date-picker>
+                            <el-time-picker
+                                v-model="editForm.time"
+                                type="time"
+                                placeholder="時間入力"
+                                format="HH:mm"
+                                value-format="HH:mm">
+                            </el-time-picker>
                         </div>
                         <div class="p-form__button">
                             <button type="submit" class="c-button c-button--twitter">変更</button>
@@ -146,6 +165,13 @@
                     date: '',
                     time: '',
                 },
+                pickerOptions: {
+                    disabledDate(time) {
+                        var now = new Date();
+                        var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                        return time.getTime() < today;
+                    }
+                }
             }
         },
         computed: {

@@ -19,6 +19,7 @@
         "browser-sync": "^2.26.7",
         "browser-sync-webpack-plugin": "2.2.2",
         "cross-env": "^5.1",
+        "element-ui": "^2.13.0",
         "es6-promise": "^4.2.8",
         "gulp": "^4.0.2",
         "gulp-sass": "^4.0.2",
