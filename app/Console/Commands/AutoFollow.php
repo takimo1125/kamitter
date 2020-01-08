@@ -57,6 +57,7 @@ class AutoFollow extends Command
         "3000" => 96,
     ];
     const FOLLOW_RATE_MAX = 108;
+    const FOLLOW_LIST_RATE_MAX = 15;
     /**
      * Execute the console command.
      * フォロワーターゲットリストを作成して自動フォローを行う。
@@ -238,6 +239,7 @@ class AutoFollow extends Command
         $waiting_status = 1;
         $under_creating_status = 2;
         $created_status = 3;
+        $follow_lst_count = 0;
         //ターゲットアカウントリストを1件取得
         $follow_target = FollowTarget::where('twitter_user_id', $twitter_user_id)
             ->whereIn('status', [1, 2])->with('filterWord')->first();
@@ -270,6 +272,12 @@ class AutoFollow extends Command
                 //非公開ユーザーの場合は、エラーチェックで入らないようにしているが、
                 //もし入っていた場合はフォローターゲットのステータスを変えて、次のユーザーへ飛ばす
                 break;
+            }
+
+            //フォローリストのレートマックスの数になったら検索終了
+            $follow_lst_count++;
+            if ($follow_lst_count >= self::FOLLOW_LIST_RATE_MAX){
+                return;
             }
 
             //APIのフォロワーリストで次ページがなければ終了
