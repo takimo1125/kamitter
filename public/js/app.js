@@ -5291,6 +5291,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -72472,7 +72476,8 @@ var render = function() {
                         placeholder: "日付入力",
                         format: "yyyy-MM-dd",
                         "value-format": "yyyy-MM-dd",
-                        "picker-options": _vm.pickerOptions
+                        "picker-options": _vm.pickerOptions,
+                        required: ""
                       },
                       model: {
                         value: _vm.addForm.date,
@@ -72488,7 +72493,8 @@ var render = function() {
                         type: "time",
                         placeholder: "時間入力",
                         format: "HH:mm",
-                        "value-format": "HH:mm"
+                        "value-format": "HH:mm",
+                        required: ""
                       },
                       model: {
                         value: _vm.addForm.time,
@@ -72624,7 +72630,8 @@ var render = function() {
                         placeholder: "日付入力",
                         format: "yyyy-MM-dd",
                         "value-format": "yyyy-MM-dd",
-                        "picker-options": _vm.pickerOptions
+                        "picker-options": _vm.pickerOptions,
+                        required: ""
                       },
                       model: {
                         value: _vm.editForm.date,
@@ -72640,7 +72647,8 @@ var render = function() {
                         type: "time",
                         placeholder: "時間入力",
                         format: "HH:mm",
-                        "value-format": "HH:mm"
+                        "value-format": "HH:mm",
+                        required: ""
                       },
                       model: {
                         value: _vm.editForm.time,
