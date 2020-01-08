@@ -120,7 +120,8 @@
                                 type="date"
                                 placeholder="日付入力"
                                 format="yyyy-MM-dd"
-                                value-format="yyyy-MM-dd">
+                                value-format="yyyy-MM-dd"
+                                :picker-options="pickerOptions">
                             </el-date-picker>
                             <el-time-picker
                                 v-model="editForm.time"
@@ -256,6 +257,7 @@
              * 表示した際に、自動ツイートのデータをフォームに入力しておく
              */
             showEditModal(autoTweet, index) {
+                this.clearErrors()
                 this.editModal = true
                 this.editForm.id = autoTweet.id
                 this.editForm.tweet = autoTweet.tweet

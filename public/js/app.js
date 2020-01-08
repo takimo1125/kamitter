@@ -5290,6 +5290,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -5486,6 +5487,7 @@ __webpack_require__.r(__webpack_exports__);
      * 表示した際に、自動ツイートのデータをフォームに入力しておく
      */
     showEditModal: function showEditModal(autoTweet, index) {
+      this.clearErrors();
       this.editModal = true;
       this.editForm.id = autoTweet.id;
       this.editForm.tweet = autoTweet.tweet;
@@ -72621,7 +72623,8 @@ var render = function() {
                         type: "date",
                         placeholder: "日付入力",
                         format: "yyyy-MM-dd",
-                        "value-format": "yyyy-MM-dd"
+                        "value-format": "yyyy-MM-dd",
+                        "picker-options": _vm.pickerOptions
                       },
                       model: {
                         value: _vm.editForm.date,
