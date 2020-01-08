@@ -89,7 +89,7 @@ class AutoLike extends Command
         Log::info('=====================================================================');
     }
     /**
-     * 自動アンフォロー完了メールを送信する
+     * 自動いいね完了メールを送信する
      * @param $system_manager_id
      * @param $twitter_user_id
      */
