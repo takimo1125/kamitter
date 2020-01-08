@@ -5290,7 +5290,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -72622,8 +72621,7 @@ var render = function() {
                         type: "date",
                         placeholder: "日付入力",
                         format: "yyyy-MM-dd",
-                        "value-format": "yyyy-MM-dd",
-                        "picker-options": _vm.pickerOptions
+                        "value-format": "yyyy-MM-dd"
                       },
                       model: {
                         value: _vm.editForm.date,

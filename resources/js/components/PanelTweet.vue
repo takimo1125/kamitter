@@ -120,8 +120,7 @@
                                 type="date"
                                 placeholder="日付入力"
                                 format="yyyy-MM-dd"
-                                value-format="yyyy-MM-dd"
-                                :picker-options="pickerOptions">
+                                value-format="yyyy-MM-dd">
                             </el-date-picker>
                             <el-time-picker
                                 v-model="editForm.time"
