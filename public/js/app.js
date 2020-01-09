@@ -5539,7 +5539,7 @@ __webpack_require__.r(__webpack_exports__);
      * @returns {string}
      */
     getYYYYMMDD: function getYYYYMMDD(formatted_date) {
-      var date = new Date(moment__WEBPACK_IMPORTED_MODULE_2___default()(formatted_date).format("ddd MMM DD YYYY, hh:mm:ss zz"));
+      var date = new Date(moment__WEBPACK_IMPORTED_MODULE_2___default()(formatted_date).toString());
       var year = date.getFullYear();
       var month = ("00" + (date.getMonth() + 1)).slice(-2);
       var day = ("00" + date.getDate()).slice(-2);
@@ -5550,7 +5550,7 @@ __webpack_require__.r(__webpack_exports__);
      * Datetime型をHH:MMの形式に変換する
      */
     getHHMM: function getHHMM(formatted_date) {
-      var date = new Date(moment__WEBPACK_IMPORTED_MODULE_2___default()(formatted_date).format("ddd MMM DD YYYY, hh:mm:ss zz"));
+      var date = new Date(moment__WEBPACK_IMPORTED_MODULE_2___default()(formatted_date).toString());
       var hours = ("00" + date.getHours()).slice(-2);
       var minutes = ("00" + date.getMinutes()).slice(-2);
       return [hours, minutes].join(":");

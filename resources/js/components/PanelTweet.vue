@@ -283,7 +283,7 @@
              * @returns {string}
              */
             getYYYYMMDD(formatted_date) {
-                const date = new Date(moment(formatted_date).format("ddd MMM DD YYYY, hh:mm:ss zz"))
+                const date = new Date(moment(formatted_date).toString())
                 const year = date.getFullYear()
                 const month = ("00" + (date.getMonth() + 1)).slice(-2)
                 const day = ("00" + date.getDate()).slice(-2)
@@ -293,7 +293,7 @@
              * Datetime型をHH:MMの形式に変換する
              */
             getHHMM(formatted_date) {
-                const date = new Date(moment(formatted_date).format("ddd MMM DD YYYY, hh:mm:ss zz"))
+                const date = new Date(moment(formatted_date).toString())
                 const hours = ("00" + date.getHours()).slice(-2)
                 const minutes = ("00" + date.getMinutes()).slice(-2)
                 return [hours, minutes].join(":")
