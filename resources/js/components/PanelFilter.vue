@@ -52,6 +52,12 @@
                             <ul v-if="addErrors.word">
                                 <li v-for="msg in addErrors.word" :key="msg">{{ msg }}</li>
                             </ul>
+                            <ul v-if="addErrors.type">
+                                <li v-for="msg in addErrors.type" :key="msg">{{ msg }}</li>
+                            </ul>
+                            <ul v-if="addErrors.remove">
+                                <li v-for="msg in addErrors.remove" :key="msg">{{ msg }}</li>
+                            </ul>
                         </div>
 
                         <label class="p-form__label" for="add-filter">条件タイプ</label>
@@ -83,6 +89,17 @@
                             </span>
                     <form class="p-form" @submit.prevent="editFilter">
 
+                        <div v-if="editErrors" class="p-form__errors">
+                            <ul v-if="editErrors.word">
+                                <li v-for="msg in editErrors.word" :key="msg">{{ msg }}</li>
+                            </ul>
+                            <ul v-if="editErrors.type">
+                                <li v-for="msg in editErrors.type" :key="msg">{{ msg }}</li>
+                            </ul>
+                            <ul v-if="editErrors.remove">
+                                <li v-for="msg in editErrors.remove" :key="msg">{{ msg }}</li>
+                            </ul>
+                        </div>
 
                         <label class="p-form__label" for="edit-filter">条件タイプ</label>
                         <select class="p-form__select" id="edit-filter" v-model="editForm.type">

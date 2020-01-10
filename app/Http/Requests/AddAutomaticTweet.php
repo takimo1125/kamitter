@@ -51,4 +51,13 @@ class AddAutomaticTweet extends FormRequest
           'after' => '現在時刻より後の時間を指定してください。'
         ];
     }
+
+    public function attributes()
+    {
+        return [
+          'date' => '日付',
+          'time' => '時間',
+          'tweet' => 'ツイート'
+        ];
+    }
 }

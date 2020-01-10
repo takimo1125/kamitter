@@ -3834,6 +3834,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -5149,6 +5166,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -88296,6 +88331,30 @@ var render = function() {
                             }),
                             0
                           )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.addErrors.type
+                        ? _c(
+                            "ul",
+                            _vm._l(_vm.addErrors.type, function(msg) {
+                              return _c("li", { key: msg }, [
+                                _vm._v(_vm._s(msg))
+                              ])
+                            }),
+                            0
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.addErrors.remove
+                        ? _c(
+                            "ul",
+                            _vm._l(_vm.addErrors.remove, function(msg) {
+                              return _c("li", { key: msg }, [
+                                _vm._v(_vm._s(msg))
+                              ])
+                            }),
+                            0
+                          )
                         : _vm._e()
                     ])
                   : _vm._e(),
@@ -88486,6 +88545,46 @@ var render = function() {
                 }
               },
               [
+                _vm.editErrors
+                  ? _c("div", { staticClass: "p-form__errors" }, [
+                      _vm.editErrors.word
+                        ? _c(
+                            "ul",
+                            _vm._l(_vm.editErrors.word, function(msg) {
+                              return _c("li", { key: msg }, [
+                                _vm._v(_vm._s(msg))
+                              ])
+                            }),
+                            0
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.editErrors.type
+                        ? _c(
+                            "ul",
+                            _vm._l(_vm.editErrors.type, function(msg) {
+                              return _c("li", { key: msg }, [
+                                _vm._v(_vm._s(msg))
+                              ])
+                            }),
+                            0
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.editErrors.remove
+                        ? _c(
+                            "ul",
+                            _vm._l(_vm.editErrors.remove, function(msg) {
+                              return _c("li", { key: msg }, [
+                                _vm._v(_vm._s(msg))
+                              ])
+                            }),
+                            0
+                          )
+                        : _vm._e()
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
                 _c(
                   "label",
                   {
@@ -90024,6 +90123,42 @@ var render = function() {
                             }),
                             0
                           )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.addErrors.tweet
+                        ? _c(
+                            "ul",
+                            _vm._l(_vm.addErrors.tweet, function(msg) {
+                              return _c("li", { key: msg }, [
+                                _vm._v(_vm._s(msg))
+                              ])
+                            }),
+                            0
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.addErrors.date
+                        ? _c(
+                            "ul",
+                            _vm._l(_vm.addErrors.date, function(msg) {
+                              return _c("li", { key: msg }, [
+                                _vm._v(_vm._s(msg))
+                              ])
+                            }),
+                            0
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.addErrors.time
+                        ? _c(
+                            "ul",
+                            _vm._l(_vm.addErrors.time, function(msg) {
+                              return _c("li", { key: msg }, [
+                                _vm._v(_vm._s(msg))
+                              ])
+                            }),
+                            0
+                          )
                         : _vm._e()
                     ])
                   : _vm._e(),
@@ -90167,6 +90302,42 @@ var render = function() {
                         ? _c(
                             "ul",
                             _vm._l(_vm.editErrors.date_time, function(msg) {
+                              return _c("li", { key: msg }, [
+                                _vm._v(_vm._s(msg))
+                              ])
+                            }),
+                            0
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.editErrors.tweet
+                        ? _c(
+                            "ul",
+                            _vm._l(_vm.editErrors.tweet, function(msg) {
+                              return _c("li", { key: msg }, [
+                                _vm._v(_vm._s(msg))
+                              ])
+                            }),
+                            0
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.editErrors.date
+                        ? _c(
+                            "ul",
+                            _vm._l(_vm.editErrors.date, function(msg) {
+                              return _c("li", { key: msg }, [
+                                _vm._v(_vm._s(msg))
+                              ])
+                            }),
+                            0
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.editErrors.time
+                        ? _c(
+                            "ul",
+                            _vm._l(_vm.editErrors.time, function(msg) {
                               return _c("li", { key: msg }, [
                                 _vm._v(_vm._s(msg))
                               ])

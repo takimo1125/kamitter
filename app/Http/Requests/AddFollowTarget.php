@@ -32,4 +32,18 @@ class AddFollowTarget extends FormRequest
             'filter_word_id' => 'required',
         ];
     }
+
+    public function attributes()
+    {
+        return [
+          'target' => 'ターゲット名',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+          'filter_word_id.required' => 'フォロー条件を選択してください。'
+        ];
+    }
 }

@@ -63,6 +63,15 @@
                             <ul v-if="addErrors.date_time">
                                 <li v-for="msg in addErrors.date_time" :key="msg">{{ msg }}</li>
                             </ul>
+                            <ul v-if="addErrors.tweet">
+                                <li v-for="msg in addErrors.tweet" :key="msg">{{ msg }}</li>
+                            </ul>
+                            <ul v-if="addErrors.date">
+                                <li v-for="msg in addErrors.date" :key="msg">{{ msg }}</li>
+                            </ul>
+                            <ul v-if="addErrors.time">
+                                <li v-for="msg in addErrors.time" :key="msg">{{ msg }}</li>
+                            </ul>
                         </div>
 
                         <label class="p-form__label" for="add-tweet">ツイート内容 {{addTextCount}}/140 *必須</label>
@@ -105,6 +114,15 @@
                         <div v-if="editErrors" class="p-form__errors">
                             <ul v-if="editErrors.date_time">
                                 <li v-for="msg in editErrors.date_time" :key="msg">{{ msg }}</li>
+                            </ul>
+                            <ul v-if="editErrors.tweet">
+                                <li v-for="msg in editErrors.tweet" :key="msg">{{ msg }}</li>
+                            </ul>
+                            <ul v-if="editErrors.date">
+                                <li v-for="msg in editErrors.date" :key="msg">{{ msg }}</li>
+                            </ul>
+                            <ul v-if="editErrors.time">
+                                <li v-for="msg in editErrors.time" :key="msg">{{ msg }}</li>
                             </ul>
                         </div>
 

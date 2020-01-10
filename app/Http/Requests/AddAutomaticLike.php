@@ -27,4 +27,11 @@ class AddAutomaticLike extends FormRequest
             'filter_word_id' => 'required'
         ];
     }
+
+    public function messages()
+    {
+        return [
+          'required' => 'キーワードを選択してください。'
+        ];
+    }
 }

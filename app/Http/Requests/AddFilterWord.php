@@ -37,7 +37,16 @@ class AddFilterWord extends FormRequest
     public function attributes()
     {
         return [
-          'word' => 'キーワード'
+          'type' => '条件タイプ',
+          'word' => 'キーワード',
+          'remove' => '除外ワード'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+          'type.required' => '条件タイプを選択してください。'
         ];
     }
 }
