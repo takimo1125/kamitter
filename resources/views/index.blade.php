@@ -11,9 +11,9 @@
     <meta name=”keywords” content=”Twitter,自動フォロー,自動アンフォロー,自動いいね、自動ツイート、神ったー,フォロー,いいね,アンフォロー,ツイート,集客”>
 
     <!-- Styles -->
-    <link href="{{ asset(mix('css/app.css')) }}" rel="stylesheet">
+    <link href="{{ asset(mix('css/app.css'),true) }}" rel="stylesheet">
     <!-- Scripts -->
-    <script src="{{ asset(mix('js/app.js')) }}" defer></script>
+    <script src="{{ asset(mix('js/app.js'),true) }}" defer></script>
 
 </head>
 <body>
