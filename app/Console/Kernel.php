@@ -39,6 +39,13 @@ class Kernel extends ConsoleKernel
         $schedule->command('auto:follow')->hourly();
         $schedule->command('inspect:followback')->hourlyAt(10);
         $schedule->command('inspect:active')->hourlyAt(30);
+
+        $schedule->command('auto:tweet')->everyMinute(1);
+        $schedule->command('auto:like')->hourlyAt(51);
+        $schedule->command('auto:unfollow')->hourly(1);
+        $schedule->command('auto:follow')->hourly(1);
+        $schedule->command('inspect:followback')->hourlyAt(11);
+        $schedule->command('inspect:active')->hourlyAt(31);
     }
     /**
      * Register the commands for the application.
